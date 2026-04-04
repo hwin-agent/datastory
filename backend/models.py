@@ -63,6 +63,10 @@ class Session:
     findings: list[Finding] = field(default_factory=list)
     report: Report | None = None
     created_at: datetime = field(default_factory=datetime.utcnow)
+    # Exploration state tracking
+    exploration_status: str = "idle"  # idle, running, complete, error
+    event_buffer: list[str] = field(default_factory=list)  # Buffered SSE events
+    exploration_error: str = ""
 
 
 # In-memory session store

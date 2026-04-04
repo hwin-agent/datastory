@@ -1,6 +1,7 @@
 """FastAPI server for DataStory backend."""
 from __future__ import annotations
 
+import asyncio
 import os
 import sys
 import uuid
@@ -19,6 +20,9 @@ from models import Session, sessions
 from agent.orchestrator import run_exploration
 
 app = FastAPI(title="DataStory API", version="1.0.0")
+
+# Track running exploration tasks
+_exploration_tasks: dict[str, asyncio.Task] = {}
 
 MAX_UPLOAD_SIZE = 50 * 1024 * 1024  # 50 MB
 MAX_SESSIONS = 50  # Cap in-memory sessions
@@ -136,17 +140,64 @@ async def upload_csv(file: UploadFile = File(...)):
     }
 
 
+async def _run_exploration_bg(session: Session):
+    """Background task: run exploration and buffer SSE events."""
+    try:
+        session.exploration_status = "running"
+        async for event in run_exploration(session):
+            session.event_buffer.append(event)
+        session.exploration_status = "complete"
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        session.exploration_status = "error"
+        session.exploration_error = str(e)
+
+
 @app.get("/api/explore/{session_id}")
 async def explore(session_id: str):
-    """SSE endpoint: run the agent exploration loop and stream events."""
+    """SSE endpoint: stream events with keepalive. Uses background exploration task."""
     if session_id not in sessions:
         raise HTTPException(404, "Session not found")
 
     session = sessions[session_id]
 
+    # Start exploration if not already running or completed
+    if session.exploration_status == "idle":
+        task = asyncio.create_task(_run_exploration_bg(session))
+        _exploration_tasks[session_id] = task
+
     async def event_stream():
-        async for event in run_exploration(session):
-            yield event
+        cursor = 0
+        heartbeat_interval = 10  # seconds between keepalive pings
+        last_heartbeat = time.time()
+
+        # Replay any buffered events first, then stream new ones
+        while True:
+            # Send any new buffered events
+            while cursor < len(session.event_buffer):
+                yield session.event_buffer[cursor]
+                cursor += 1
+                last_heartbeat = time.time()
+
+            # Check if exploration is done
+            if session.exploration_status in ("complete", "error"):
+                # Send any remaining events
+                while cursor < len(session.event_buffer):
+                    yield session.event_buffer[cursor]
+                    cursor += 1
+                if session.exploration_status == "error":
+                    import json
+                    yield f"event: error\ndata: {json.dumps({'message': session.exploration_error})}\n\n"
+                break
+
+            # Send keepalive heartbeat to prevent proxy timeout
+            now = time.time()
+            if now - last_heartbeat >= heartbeat_interval:
+                yield ": keepalive\n\n"
+                last_heartbeat = now
+
+            await asyncio.sleep(0.5)
 
     return StreamingResponse(
         event_stream(),

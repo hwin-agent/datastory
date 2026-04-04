@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: datastory-api
+    name: datastory-backend
     runtime: python
     region: ohio
     plan: free
