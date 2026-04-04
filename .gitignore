@@ -1,0 +1,5 @@
+# Hwin orchestrator sentinels
+*-complete.json
+node_modules/
+.env
+.env.local
