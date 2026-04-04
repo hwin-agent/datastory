@@ -21,7 +21,6 @@ export default function ExplorePage({
   const [reportReady, setReportReady] = useState(false);
   const isDeepDiveRef = useRef(false);
   const bottomRef = useRef<HTMLDivElement>(null);
-  const cleanupRef = useRef<(() => void) | null>(null);
 
   // Auto-scroll to bottom when new findings appear
   useEffect(() => {
@@ -214,22 +213,9 @@ export default function ExplorePage({
 
   useEffect(() => {
     const disconnect = connectSSE(sessionId, handleEvent, () => {
-      // Stream ended. If report is not ready, it might be an error.
+      // Exploration finished (complete or error)
       if (!reportReady) {
-        setStatus("Analysis in progress — waiting for results...");
-        // Reconnect after a short delay to pick up buffered events
-        const timer = setTimeout(() => {
-          setSteps([]);
-          setFindings([]);
-          const retry = connectSSE(sessionId, handleEvent, () => {
-            if (!reportReady) {
-              setStatus("Connection ended. Please refresh if the story doesn't appear.");
-            }
-          });
-          // Store cleanup
-          cleanupRef.current = retry;
-        }, 2000);
-        return () => clearTimeout(timer);
+        setStatus("Analysis complete — loading results...");
       }
     });
     return disconnect;

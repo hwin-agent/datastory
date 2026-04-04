@@ -18,95 +18,76 @@ export interface SSEEvent {
 export type SSEEventHandler = (event: SSEEvent) => void;
 
 /**
- * Connect to SSE using fetch() — no auto-reconnect like EventSource.
- * On disconnect, calls onClose. Caller decides whether to retry.
+ * Poll-based exploration client. Polls /api/explore/{sessionId}/poll every 2s.
+ * Much more reliable than SSE on Render's free tier.
  */
 export function connectSSE(
   sessionId: string,
   onEvent: SSEEventHandler,
   onClose?: () => void
 ): () => void {
-  const url = `${API_URL}/api/explore/${sessionId}`;
-  const controller = new AbortController();
+  let cursor = 0;
+  let stopped = false;
+  let timeoutId: ReturnType<typeof setTimeout> | null = null;
 
-  (async () => {
+  async function poll() {
+    if (stopped) return;
+
     try {
-      const response = await fetch(url, {
-        signal: controller.signal,
-        headers: { Accept: "text/event-stream" },
-      });
+      const res = await fetch(
+        `${API_URL}/api/explore/${sessionId}/poll?cursor=${cursor}`
+      );
 
-      if (!response.ok || !response.body) {
+      if (!res.ok) {
         onEvent({
           type: "error",
-          data: { message: `Server returned ${response.status}` },
+          data: { message: `Server returned ${res.status}` },
         });
         onClose?.();
         return;
       }
 
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let buffer = "";
+      const body = await res.json();
+      const { status, events, cursor: nextCursor, error } = body;
 
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
+      // Dispatch new events
+      for (const evt of events) {
+        if (stopped) return;
+        onEvent({ type: evt.type as SSEEventType, data: evt.data });
+      }
+      cursor = nextCursor;
 
-        buffer += decoder.decode(value, { stream: true });
-
-        // Parse SSE events from buffer
-        const parts = buffer.split("\n\n");
-        // Keep the last incomplete part in buffer
-        buffer = parts.pop() || "";
-
-        for (const part of parts) {
-          if (!part.trim()) continue;
-
-          // Skip keepalive comments
-          if (part.trim().startsWith(":")) continue;
-
-          let eventType: SSEEventType = "status";
-          let dataStr = "";
-
-          for (const line of part.split("\n")) {
-            if (line.startsWith("event: ")) {
-              eventType = line.slice(7).trim() as SSEEventType;
-            } else if (line.startsWith("data: ")) {
-              dataStr += line.slice(6);
-            } else if (line.startsWith(":")) {
-              // comment / keepalive, skip
-            }
-          }
-
-          if (dataStr) {
-            try {
-              const data = JSON.parse(dataStr);
-              onEvent({ type: eventType, data });
-            } catch {
-              onEvent({ type: eventType, data: { message: dataStr } });
-            }
-          }
+      // Check if done
+      if (status === "complete" || status === "error") {
+        if (error) {
+          onEvent({ type: "error", data: { message: error } });
         }
+        onClose?.();
+        return;
       }
 
-      // Stream ended normally (exploration complete)
-      onClose?.();
-    } catch (err: unknown) {
-      if (err instanceof Error && err.name === "AbortError") return;
-      console.error("SSE connection error:", err);
-      onEvent({
-        type: "error",
-        data: {
-          message:
-            err instanceof Error ? err.message : "Connection lost",
-        },
-      });
-      onClose?.();
+      // Schedule next poll
+      if (!stopped) {
+        timeoutId = setTimeout(poll, 2000);
+      }
+    } catch (err) {
+      if (stopped) return;
+      console.error("Poll error:", err);
+      // Retry after a delay
+      if (!stopped) {
+        timeoutId = setTimeout(poll, 3000);
+      }
     }
-  })();
+  }
 
+  // Start polling immediately
+  poll();
+
+  // Return cleanup function
   return () => {
-    controller.abort();
+    stopped = true;
+    if (timeoutId !== null) {
+      clearTimeout(timeoutId);
+    }
   };
 }

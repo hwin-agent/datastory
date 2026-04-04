@@ -141,11 +141,25 @@ async def upload_csv(file: UploadFile = File(...)):
 
 
 async def _run_exploration_bg(session: Session):
-    """Background task: run exploration and buffer SSE events."""
+    """Background task: run exploration and buffer events as parsed dicts."""
+    import json as _json
     try:
         session.exploration_status = "running"
-        async for event in run_exploration(session):
-            session.event_buffer.append(event)
+        async for raw_sse in run_exploration(session):
+            # Parse SSE string "event: <type>\ndata: <json>\n\n" into dict
+            event_type = ""
+            data_str = ""
+            for line in raw_sse.strip().split("\n"):
+                if line.startswith("event: "):
+                    event_type = line[7:].strip()
+                elif line.startswith("data: "):
+                    data_str = line[6:]
+            if event_type and data_str:
+                try:
+                    parsed = _json.loads(data_str)
+                except Exception:
+                    parsed = {"message": data_str}
+                session.event_buffer.append({"type": event_type, "data": parsed})
         session.exploration_status = "complete"
     except Exception as e:
         import traceback
@@ -154,50 +168,76 @@ async def _run_exploration_bg(session: Session):
         session.exploration_error = str(e)
 
 
-@app.get("/api/explore/{session_id}")
-async def explore(session_id: str):
-    """SSE endpoint: stream events with keepalive. Uses background exploration task."""
+def _ensure_exploration_started(session: Session):
+    """Start exploration background task if not already running."""
+    if session.exploration_status == "idle":
+        task = asyncio.create_task(_run_exploration_bg(session))
+        _exploration_tasks[session.id] = task
+
+
+@app.post("/api/explore/{session_id}/start")
+async def start_exploration(session_id: str):
+    """Start exploration as a background task. Returns immediately."""
+    if session_id not in sessions:
+        raise HTTPException(404, "Session not found")
+    session = sessions[session_id]
+    _ensure_exploration_started(session)
+    return {"status": session.exploration_status, "session_id": session_id}
+
+
+@app.get("/api/explore/{session_id}/poll")
+async def poll_exploration(session_id: str, cursor: int = 0):
+    """Poll for exploration progress. Returns new events since cursor."""
     if session_id not in sessions:
         raise HTTPException(404, "Session not found")
 
     session = sessions[session_id]
 
-    # Start exploration if not already running or completed
-    if session.exploration_status == "idle":
-        task = asyncio.create_task(_run_exploration_bg(session))
-        _exploration_tasks[session_id] = task
+    # Auto-start exploration on first poll if not started
+    _ensure_exploration_started(session)
+
+    # Return events from cursor onwards
+    new_events = session.event_buffer[cursor:]
+    next_cursor = len(session.event_buffer)
+
+    return {
+        "status": session.exploration_status,
+        "events": new_events,
+        "cursor": next_cursor,
+        "error": session.exploration_error if session.exploration_status == "error" else None,
+    }
+
+
+@app.get("/api/explore/{session_id}")
+async def explore(session_id: str):
+    """SSE endpoint (legacy). Streams events as SSE."""
+    import json as _json
+    if session_id not in sessions:
+        raise HTTPException(404, "Session not found")
+
+    session = sessions[session_id]
+    _ensure_exploration_started(session)
 
     async def event_stream():
         cursor = 0
-        heartbeat_interval = 10  # seconds between keepalive pings
-        last_heartbeat = time.time()
-
-        # Replay any buffered events first, then stream new ones
         while True:
-            # Send any new buffered events
             while cursor < len(session.event_buffer):
-                yield session.event_buffer[cursor]
+                evt = session.event_buffer[cursor]
+                yield f"event: {evt['type']}\ndata: {_json.dumps(evt['data'])}\n\n"
                 cursor += 1
-                last_heartbeat = time.time()
 
-            # Check if exploration is done
             if session.exploration_status in ("complete", "error"):
-                # Send any remaining events
                 while cursor < len(session.event_buffer):
-                    yield session.event_buffer[cursor]
+                    evt = session.event_buffer[cursor]
+                    yield f"event: {evt['type']}\ndata: {_json.dumps(evt['data'])}\n\n"
                     cursor += 1
                 if session.exploration_status == "error":
-                    import json
-                    yield f"event: error\ndata: {json.dumps({'message': session.exploration_error})}\n\n"
+                    yield f"event: error\ndata: {_json.dumps({'message': session.exploration_error})}\n\n"
                 break
 
-            # Send keepalive heartbeat to prevent proxy timeout
-            now = time.time()
-            if now - last_heartbeat >= heartbeat_interval:
-                yield ": keepalive\n\n"
-                last_heartbeat = now
-
-            await asyncio.sleep(0.5)
+            # Heartbeat as actual SSE event to keep connection alive
+            yield f"event: heartbeat\ndata: {_json.dumps({'ts': time.time()})}\n\n"
+            await asyncio.sleep(2)
 
     return StreamingResponse(
         event_stream(),
