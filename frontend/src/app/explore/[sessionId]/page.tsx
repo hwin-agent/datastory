@@ -214,12 +214,11 @@ export default function ExplorePage({
   useEffect(() => {
     const disconnect = connectSSE(sessionId, handleEvent, () => {
       // Exploration finished (complete or error)
-      if (!reportReady) {
-        setStatus("Analysis complete — loading results...");
-      }
+      setStatus("Analysis complete.");
     });
     return disconnect;
-  }, [sessionId, handleEvent, reportReady]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sessionId, handleEvent]);
 
   return (
     <div className="flex flex-1 min-h-screen bg-paper">

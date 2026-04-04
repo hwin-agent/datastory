@@ -65,7 +65,7 @@ class Session:
     created_at: datetime = field(default_factory=datetime.utcnow)
     # Exploration state tracking
     exploration_status: str = "idle"  # idle, running, complete, error
-    event_buffer: list[str] = field(default_factory=list)  # Buffered SSE events
+    event_buffer: list[dict] = field(default_factory=list)  # Buffered parsed events
     exploration_error: str = ""
 
 
