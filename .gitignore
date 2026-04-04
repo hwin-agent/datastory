@@ -1,5 +1,30 @@
 # Hwin orchestrator sentinels
 *-complete.json
+
+# Dependencies
 node_modules/
+backend/.venv/
+
+# Environment
 .env
 .env.local
+frontend/.env.local
+
+# Build outputs
+frontend/.next/
+frontend/out/
+backend/__pycache__/
+backend/agent/__pycache__/
+backend/charts/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel

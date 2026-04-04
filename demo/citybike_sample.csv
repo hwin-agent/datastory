@@ -1,0 +1,501 @@
+trip_id,trip_duration,start_time,stop_time,start_station_name,start_station_id,end_station_name,end_station_id,user_type,gender,birth_year,bike_id,temperature_f,day_type
+1,474,2025-11-05 08:23:43,2025-11-05 08:31:37,Pearl St & Hanover Sq,4012,Park Row & City Hall,4004,Subscriber,Male,1991,36949,72.1,Weekday
+2,677,2025-07-07 19:14:46,2025-07-07 19:26:03,Wall St & William St,4001,Murray St & West St,4008,Subscriber,Male,1983,33005,35.0,Weekday
+3,784,2025-09-21 18:34:13,2025-09-21 18:47:17,Cedar St & Broadway,4010,Hunter College - Lexington & E 68 St,3005,Subscriber,Female,1981,33152,73.6,Weekday
+4,612,2025-12-04 18:52:23,2025-12-04 19:02:35,Chambers St & West St,4003,Wall St & William St,4001,Subscriber,Male,1977,34859,68.6,Weekday
+5,684,2025-09-18 08:38:57,2025-09-18 08:50:21,Beekman St & Nassau St,4014,Rector St & Greenwich St,4011,Subscriber,Male,1996,36184,47.1,Weekday
+6,456,2025-04-11 11:00:04,2025-04-11 11:07:40,Whitehall St & South Ferry,4013,NYU - University Pl & E 8 St,3003,Customer,Male,1987,37385,71.1,Weekend
+7,622,2025-08-10 16:22:38,2025-08-10 16:33:00,Pearl St & Hanover Sq,4012,Broadway & Battery Pl,4005,Subscriber,Male,1985,36892,47.5,Weekday
+8,550,2025-12-06 17:10:57,2025-12-06 17:20:07,The New School - W 12 St & 6 Ave,3009,Chambers St & West St,4003,Subscriber,Male,1973,35592,81.5,Weekday
+9,581,2025-11-03 08:43:23,2025-11-03 08:53:04,Columbia University - Broadway & W 116 St,3001,Liberty St & Broadway,4016,Subscriber,Male,1985,31998,53.9,Weekday
+10,576,2025-08-12 07:00:18,2025-08-12 07:09:54,Columbia University - Broadway & W 116 St,3001,Liberty St & Broadway,4016,Subscriber,Male,1983,35249,35.0,Weekday
+11,609,2025-07-17 17:10:47,2025-07-17 17:20:56,Broad St & Bridge St,4007,City College - Convent Ave & W 138 St,3007,Subscriber,Male,1978,36287,67.1,Weekday
+12,595,2025-05-08 15:17:39,2025-05-08 15:27:34,Broad St & Bridge St,4007,Pearl St & Hanover Sq,4012,Customer,Male,1980,34736,62.0,Weekend
+13,469,2025-02-06 19:58:54,2025-02-06 20:06:43,Chambers St & West St,4003,Fulton St & Broadway,4006,Customer,Male,1989,37400,35.0,Weekday
+14,902,2025-12-04 08:53:34,2025-12-04 09:08:36,Park Row & City Hall,4004,Liberty St & Broadway,4016,Subscriber,Female,1986,30956,71.8,Weekday
+15,390,2025-01-22 17:29:37,2025-01-22 17:36:07,Wall St & William St,4001,Cedar St & Broadway,4010,Subscriber,Male,1994,33436,74.2,Weekday
+16,574,2025-05-27 10:34:48,2025-05-27 10:44:22,Pearl St & Hanover Sq,4012,NYU - University Pl & E 8 St,3003,Subscriber,Male,2005,37679,48.7,Weekday
+17,296,2025-06-10 19:02:17,2025-06-10 19:07:13,Beekman St & Nassau St,4014,Cedar St & Broadway,4010,Customer,Unknown,1985,31816,58.0,Weekday
+18,656,2025-10-26 17:47:38,2025-10-26 17:58:34,Park Row & City Hall,4004,Park Row & City Hall,4004,Subscriber,Male,1976,35596,40.1,Weekday
+19,431,2025-05-23 10:33:01,2025-05-23 10:40:12,Chambers St & West St,4003,Vesey St & Church St,4009,Subscriber,Male,1990,35919,83.8,Weekday
+20,488,2025-03-01 10:43:04,2025-03-01 10:51:12,Columbia University - Broadway & W 116 St,3001,Whitehall St & South Ferry,4013,Customer,Male,1969,35222,80.9,Weekday
+21,745,2025-08-17 08:52:22,2025-08-17 09:04:47,City College - Convent Ave & W 138 St,3007,Rector St & Greenwich St,4011,Subscriber,Female,1996,31150,57.4,Weekday
+22,751,2025-10-05 15:02:11,2025-10-05 15:14:42,Rector St & Greenwich St,4011,Columbia University - Broadway & W 116 St,3001,Customer,Male,1991,34249,84.7,Weekend
+23,725,2025-12-23 18:57:09,2025-12-23 19:09:14,Cedar St & Broadway,4010,Cedar St & Broadway,4010,Subscriber,Male,1993,32849,41.6,Weekday
+24,731,2025-02-02 07:50:42,2025-02-02 08:02:53,Hunter College - Lexington & E 68 St,3005,Columbia University - Broadway & W 116 St,3001,Subscriber,Female,1993,35732,70.3,Weekday
+25,600,2025-07-15 08:52:49,2025-07-15 09:02:49,Vesey St & Church St,4009,Fulton St & Broadway,4006,Subscriber,Male,1982,39708,35.0,Weekday
+26,1011,2025-04-06 16:22:31,2025-04-06 16:39:22,Columbia University - Broadway & W 116 St,3001,City College - Convent Ave & W 138 St,3007,Subscriber,Male,2004,33440,59.2,Weekend
+27,653,2025-02-21 09:57:46,2025-02-21 10:08:39,Park Row & City Hall,4004,Broadway & Battery Pl,4005,Customer,Male,1991,38335,39.9,Weekday
+28,733,2025-09-10 17:06:45,2025-09-10 17:18:58,Cedar St & Broadway,4010,Liberty St & Broadway,4016,Subscriber,Male,1992,31191,66.8,Weekday
+29,280,2025-10-28 10:35:05,2025-10-28 10:39:45,Rector St & Greenwich St,4011,NYU - University Pl & E 8 St,3003,Customer,Male,1990,37419,78.9,Weekday
+30,555,2025-05-06 08:19:27,2025-05-06 08:28:42,Broad St & Bridge St,4007,Chambers St & West St,4003,Subscriber,Male,1969,38647,41.6,Weekday
+31,509,2025-07-22 10:36:35,2025-07-22 10:45:04,Wall St & William St,4001,Hunter College - Lexington & E 68 St,3005,Subscriber,Male,1988,39442,47.8,Weekday
+32,1348,2025-06-05 13:07:57,2025-06-05 13:30:25,Columbia University - Broadway & W 116 St,3001,Whitehall St & South Ferry,4013,Subscriber,Female,1986,36819,38.3,Weekend
+33,669,2025-08-08 19:28:12,2025-08-08 19:39:21,Chambers St & West St,4003,The New School - W 12 St & 6 Ave,3009,Subscriber,Unknown,2005,31581,38.2,Weekday
+34,691,2025-09-24 16:25:24,2025-09-24 16:36:55,Park Row & City Hall,4004,The New School - W 12 St & 6 Ave,3009,Subscriber,Male,1991,33925,36.3,Weekday
+35,930,2025-01-23 13:52:36,2025-01-23 14:08:06,Wall St & William St,4001,NYU - University Pl & E 8 St,3003,Customer,Male,2005,34809,35.0,Weekend
+36,467,2025-06-11 14:53:02,2025-06-11 15:00:49,Columbia University - Broadway & W 116 St,3001,Cedar St & Broadway,4010,Subscriber,Male,1991,34363,71.1,Weekend
+37,731,2025-07-11 20:33:37,2025-07-11 20:45:48,John St & William St,4015,Whitehall St & South Ferry,4013,Subscriber,Male,2001,39521,72.9,Weekend
+38,768,2025-10-12 10:09:55,2025-10-12 10:22:43,Pearl St & Hanover Sq,4012,John St & William St,4015,Subscriber,Unknown,2005,33472,57.4,Weekday
+39,293,2025-04-21 07:22:54,2025-04-21 07:27:47,Vesey St & Church St,4009,The New School - W 12 St & 6 Ave,3009,Subscriber,Unknown,1981,36238,77.8,Weekday
+40,691,2025-11-13 17:20:05,2025-11-13 17:31:36,Broadway & Battery Pl,4005,Park Row & City Hall,4004,Subscriber,Male,1982,36376,54.7,Weekday
+41,591,2025-03-02 07:25:35,2025-03-02 07:35:26,Wall St & William St,4001,Cedar St & Broadway,4010,Customer,Male,1990,31276,35.0,Weekday
+42,588,2025-08-26 19:46:59,2025-08-26 19:56:47,Vesey St & Church St,4009,Cedar St & Broadway,4010,Subscriber,Male,1992,38172,85.6,Weekend
+43,603,2025-05-06 20:24:16,2025-05-06 20:34:19,Park Row & City Hall,4004,Rector St & Greenwich St,4011,Subscriber,Male,1987,33596,72.7,Weekend
+44,574,2025-01-06 10:25:33,2025-01-06 10:35:07,Park Row & City Hall,4004,Broadway & Battery Pl,4005,Subscriber,Male,1984,30876,79.4,Weekday
+45,4740,2025-03-03 07:01:14,2025-03-03 08:20:14,Fulton St & Broadway,4006,Wall St & William St,4001,Subscriber,Male,1989,36316,64.2,Weekday
+46,633,2025-12-22 19:02:32,2025-12-22 19:13:05,City College - Convent Ave & W 138 St,3007,John St & William St,4015,Subscriber,Male,1976,39093,65.2,Weekend
+47,433,2025-02-07 18:34:29,2025-02-07 18:41:42,NYU - University Pl & E 8 St,3003,Murray St & West St,4008,Subscriber,Male,1995,39310,68.8,Weekday
+48,615,2025-08-17 20:29:34,2025-08-17 20:39:49,Whitehall St & South Ferry,4013,Beekman St & Nassau St,4014,Subscriber,Male,1993,34820,70.8,Weekend
+49,769,2025-06-28 16:37:32,2025-06-28 16:50:21,NYU - University Pl & E 8 St,3003,City College - Convent Ave & W 138 St,3007,Subscriber,Male,1983,35142,45.0,Weekday
+50,626,2025-02-11 19:51:14,2025-02-11 20:01:40,Wall St & William St,4001,Columbia University - Broadway & W 116 St,3001,Subscriber,Male,1989,35742,47.0,Weekday
+51,399,2025-03-27 08:09:04,2025-03-27 08:15:43,Murray St & West St,4008,City College - Convent Ave & W 138 St,3007,Subscriber,Unknown,1979,31865,57.8,Weekday
+52,961,2025-04-05 09:50:35,2025-04-05 10:06:36,Liberty St & Broadway,4016,Rector St & Greenwich St,4011,Subscriber,Female,2005,30793,67.8,Weekday
+53,193,2025-04-21 19:59:42,2025-04-21 20:02:55,Pearl St & Hanover Sq,4012,Fulton St & Broadway,4006,Subscriber,Male,1989,33531,75.5,Weekday
+54,499,2025-10-23 07:21:10,2025-10-23 07:29:29,Fulton St & Broadway,4006,The New School - W 12 St & 6 Ave,3009,Subscriber,Male,2001,31792,55.7,Weekday
+55,473,2025-07-21 10:56:52,2025-07-21 11:04:45,John St & William St,4015,City College - Convent Ave & W 138 St,3007,Subscriber,Male,2001,37970,48.8,Weekday
+56,755,2025-09-08 09:53:23,2025-09-08 10:05:58,Pearl St & Hanover Sq,4012,Wall St & William St,4001,Subscriber,Male,1987,31990,39.0,Weekday
+57,893,2025-09-14 19:12:29,2025-09-14 19:27:22,Columbia University - Broadway & W 116 St,3001,Whitehall St & South Ferry,4013,Subscriber,Female,1986,32482,35.0,Weekday
+58,637,2025-08-10 17:50:03,2025-08-10 18:00:40,John St & William St,4015,Whitehall St & South Ferry,4013,Subscriber,Male,1972,36016,59.2,Weekday
+59,524,2025-12-15 19:00:56,2025-12-15 19:09:40,Hunter College - Lexington & E 68 St,3005,Fulton St & Broadway,4006,Subscriber,Male,1987,35954,56.5,Weekday
+60,327,2025-04-30 17:42:15,2025-04-30 17:47:42,Beekman St & Nassau St,4014,Park Row & City Hall,4004,Subscriber,Male,1996,34547,79.2,Weekday
+61,1113,2025-08-22 10:02:22,2025-08-22 10:20:55,NYU - University Pl & E 8 St,3003,Chambers St & West St,4003,Customer,Female,1982,34491,35.0,Weekend
+62,820,2025-08-03 09:49:50,2025-08-03 10:03:30,John St & William St,4015,Broadway & Battery Pl,4005,Customer,Male,1990,32573,35.2,Weekend
+63,642,2025-01-17 13:24:37,2025-01-17 13:35:19,Cedar St & Broadway,4010,Chambers St & West St,4003,Subscriber,Male,1971,31622,73.6,Weekend
+64,1033,2025-05-02 17:01:59,2025-05-02 17:19:12,Hunter College - Lexington & E 68 St,3005,Wall St & William St,4001,Customer,Female,1969,35941,45.3,Weekday
+65,613,2025-08-20 11:53:33,2025-08-20 12:03:46,City College - Convent Ave & W 138 St,3007,John St & William St,4015,Customer,Male,2000,34150,70.3,Weekend
+66,471,2025-03-14 07:39:16,2025-03-14 07:47:07,Fulton St & Broadway,4006,Columbia University - Broadway & W 116 St,3001,Customer,Male,1991,35760,68.9,Weekday
+67,739,2025-10-02 16:43:58,2025-10-02 16:56:17,Rector St & Greenwich St,4011,Chambers St & West St,4003,Subscriber,Male,1997,34090,37.3,Weekday
+68,844,2025-03-30 20:14:58,2025-03-30 20:29:02,Cedar St & Broadway,4010,Whitehall St & South Ferry,4013,Customer,Male,1988,33993,71.0,Weekend
+69,286,2025-01-07 07:50:47,2025-01-07 07:55:33,Rector St & Greenwich St,4011,Pearl St & Hanover Sq,4012,Subscriber,Unknown,2005,38007,76.7,Weekday
+70,994,2025-05-11 13:42:39,2025-05-11 13:59:13,Chambers St & West St,4003,Liberty St & Broadway,4016,Customer,Female,2002,34278,53.5,Weekend
+71,245,2025-04-06 09:58:38,2025-04-06 10:02:43,Vesey St & Church St,4009,Whitehall St & South Ferry,4013,Subscriber,Male,1988,39005,85.2,Weekday
+72,404,2025-12-06 16:00:29,2025-12-06 16:07:13,Beekman St & Nassau St,4014,Murray St & West St,4008,Subscriber,Male,1972,33760,72.8,Weekday
+73,495,2025-10-29 19:10:12,2025-10-29 19:18:27,John St & William St,4015,Beekman St & Nassau St,4014,Subscriber,Male,1997,37878,76.5,Weekday
+74,1030,2025-02-23 15:48:08,2025-02-23 16:05:18,City College - Convent Ave & W 138 St,3007,John St & William St,4015,Customer,Female,1992,31913,41.4,Weekend
+75,711,2025-03-30 07:03:13,2025-03-30 07:15:04,Park Row & City Hall,4004,Beekman St & Nassau St,4014,Subscriber,Male,1984,31380,35.9,Weekday
+76,670,2025-02-07 19:58:04,2025-02-07 20:09:14,Park Row & City Hall,4004,Broadway & Battery Pl,4005,Subscriber,Male,1986,35295,43.9,Weekday
+77,702,2025-08-25 07:05:23,2025-08-25 07:17:05,City College - Convent Ave & W 138 St,3007,Pearl St & Hanover Sq,4012,Subscriber,Female,1993,37314,72.7,Weekday
+78,1081,2025-01-31 15:41:09,2025-01-31 15:59:10,Hunter College - Lexington & E 68 St,3005,Pearl St & Hanover Sq,4012,Customer,Female,1987,32719,43.4,Weekend
+79,879,2025-06-12 19:05:18,2025-06-12 19:19:57,Liberty St & Broadway,4016,Beekman St & Nassau St,4014,Subscriber,Female,1994,35352,35.0,Weekday
+80,503,2025-01-17 20:21:16,2025-01-17 20:29:39,Whitehall St & South Ferry,4013,Rector St & Greenwich St,4011,Subscriber,Unknown,1992,38073,90.8,Weekend
+81,947,2025-08-14 16:03:16,2025-08-14 16:19:03,Hunter College - Lexington & E 68 St,3005,Beekman St & Nassau St,4014,Subscriber,Female,1987,37266,35.0,Weekday
+82,743,2025-12-23 09:19:05,2025-12-23 09:31:28,The New School - W 12 St & 6 Ave,3009,Broad St & Bridge St,4007,Customer,Male,1992,31682,38.9,Weekday
+83,577,2025-07-27 09:07:59,2025-07-27 09:17:36,Wall St & William St,4001,Wall St & William St,4001,Customer,Male,1985,36573,56.2,Weekday
+84,746,2025-09-30 17:43:19,2025-09-30 17:55:45,Hunter College - Lexington & E 68 St,3005,Cedar St & Broadway,4010,Subscriber,Female,1992,31763,71.9,Weekday
+85,777,2025-08-05 07:59:37,2025-08-05 08:12:34,City College - Convent Ave & W 138 St,3007,NYU - University Pl & E 8 St,3003,Subscriber,Female,1987,33496,43.2,Weekday
+86,588,2025-08-30 10:32:01,2025-08-30 10:41:49,Vesey St & Church St,4009,Broadway & Battery Pl,4005,Subscriber,Male,1999,36368,53.4,Weekday
+87,542,2025-11-01 19:10:02,2025-11-01 19:19:04,Wall St & William St,4001,Vesey St & Church St,4009,Subscriber,Male,1978,30634,76.7,Weekday
+88,571,2025-07-27 10:05:57,2025-07-27 10:15:28,Murray St & West St,4008,Broadway & Battery Pl,4005,Subscriber,Male,2005,30021,68.2,Weekday
+89,518,2025-11-03 10:17:05,2025-11-03 10:25:43,Cedar St & Broadway,4010,Fulton St & Broadway,4006,Subscriber,Male,1982,37057,41.5,Weekday
+90,552,2025-12-16 16:30:57,2025-12-16 16:40:09,Vesey St & Church St,4009,Broadway & Battery Pl,4005,Subscriber,Male,1985,30956,35.0,Weekday
+91,945,2025-07-05 14:11:02,2025-07-05 14:26:47,Whitehall St & South Ferry,4013,Murray St & West St,4008,Customer,Female,1971,30529,35.0,Weekend
+92,314,2025-02-10 17:53:59,2025-02-10 17:59:13,Park Row & City Hall,4004,Park Row & City Hall,4004,Subscriber,Male,2002,31646,73.8,Weekday
+93,663,2025-06-13 16:22:46,2025-06-13 16:33:49,Broadway & Battery Pl,4005,NYU - University Pl & E 8 St,3003,Subscriber,Male,1999,36430,35.2,Weekday
+94,573,2025-05-01 09:36:46,2025-05-01 09:46:19,NYU - University Pl & E 8 St,3003,Fulton St & Broadway,4006,Subscriber,Female,1984,36116,51.5,Weekday
+95,427,2025-10-20 10:25:28,2025-10-20 10:32:35,Vesey St & Church St,4009,Murray St & West St,4008,Subscriber,Male,1986,36262,78.3,Weekday
+96,593,2025-12-06 18:44:51,2025-12-06 18:54:44,Hunter College - Lexington & E 68 St,3005,The New School - W 12 St & 6 Ave,3009,Subscriber,Male,2005,31969,59.6,Weekday
+97,430,2025-08-06 09:09:29,2025-08-06 09:16:39,Chambers St & West St,4003,Columbia University - Broadway & W 116 St,3001,Customer,Male,1990,36257,79.3,Weekday
+98,876,2025-03-10 07:25:27,2025-03-10 07:40:03,Liberty St & Broadway,4016,Park Row & City Hall,4004,Subscriber,Female,1994,34033,35.0,Weekday
+99,676,2025-10-06 11:44:10,2025-10-06 11:55:26,Columbia University - Broadway & W 116 St,3001,Columbia University - Broadway & W 116 St,3001,Customer,Male,1997,33712,53.7,Weekend
+100,832,2025-11-01 19:48:34,2025-11-01 20:02:26,Cedar St & Broadway,4010,Rector St & Greenwich St,4011,Subscriber,Male,1979,36059,41.8,Weekday
+101,593,2025-06-03 07:11:04,2025-06-03 07:20:57,Vesey St & Church St,4009,Cedar St & Broadway,4010,Subscriber,Male,1983,34399,35.0,Weekday
+102,762,2025-04-27 10:14:24,2025-04-27 10:27:06,Liberty St & Broadway,4016,Broad St & Bridge St,4007,Customer,Female,1997,38906,79.9,Weekday
+103,412,2025-10-18 19:15:41,2025-10-18 19:22:33,The New School - W 12 St & 6 Ave,3009,John St & William St,4015,Subscriber,Male,1978,35539,66.7,Weekday
+104,1228,2025-03-25 12:53:06,2025-03-25 13:13:34,Beekman St & Nassau St,4014,City College - Convent Ave & W 138 St,3007,Customer,Female,1981,39600,35.0,Weekend
+105,435,2025-06-19 19:23:15,2025-06-19 19:30:30,Liberty St & Broadway,4016,Vesey St & Church St,4009,Subscriber,Male,1983,31072,92.7,Weekday
+106,601,2025-04-18 08:32:54,2025-04-18 08:42:55,Chambers St & West St,4003,John St & William St,4015,Subscriber,Female,1976,38853,71.2,Weekday
+107,717,2025-11-16 09:06:20,2025-11-16 09:18:17,Whitehall St & South Ferry,4013,Chambers St & West St,4003,Subscriber,Male,1974,39769,44.0,Weekday
+108,789,2025-08-17 07:35:02,2025-08-17 07:48:11,Wall St & William St,4001,Broad St & Bridge St,4007,Customer,Unknown,1980,30072,35.0,Weekday
+109,720,2025-09-21 17:07:49,2025-09-21 17:19:49,Columbia University - Broadway & W 116 St,3001,Chambers St & West St,4003,Subscriber,Male,1997,38258,37.7,Weekday
+110,908,2025-02-05 16:12:28,2025-02-05 16:27:36,Park Row & City Hall,4004,Wall St & William St,4001,Subscriber,Male,1988,33374,35.0,Weekday
+111,672,2025-04-25 19:53:04,2025-04-25 20:04:16,John St & William St,4015,Pearl St & Hanover Sq,4012,Subscriber,Male,1991,36099,35.0,Weekday
+112,867,2025-08-25 10:40:20,2025-08-25 10:54:47,Cedar St & Broadway,4010,Liberty St & Broadway,4016,Customer,Male,1985,32817,44.6,Weekend
+113,690,2025-09-01 18:11:46,2025-09-01 18:23:16,Pearl St & Hanover Sq,4012,Hunter College - Lexington & E 68 St,3005,Customer,Male,1982,30560,74.6,Weekend
+114,2769,2025-07-25 10:17:09,2025-07-25 11:03:18,Park Row & City Hall,4004,Fulton St & Broadway,4006,Subscriber,Female,1997,35656,78.2,Weekday
+115,715,2025-04-27 08:07:20,2025-04-27 08:19:15,Wall St & William St,4001,City College - Convent Ave & W 138 St,3007,Subscriber,Male,1977,37137,40.3,Weekday
+116,652,2025-06-09 16:42:01,2025-06-09 16:52:53,The New School - W 12 St & 6 Ave,3009,Murray St & West St,4008,Subscriber,Unknown,1968,35179,35.0,Weekday
+117,530,2025-03-21 19:59:32,2025-03-21 20:08:22,Fulton St & Broadway,4006,John St & William St,4015,Subscriber,Male,1981,31638,55.7,Weekday
+118,213,2025-03-03 19:34:06,2025-03-03 19:37:39,City College - Convent Ave & W 138 St,3007,Liberty St & Broadway,4016,Customer,Male,1997,31549,66.0,Weekday
+119,527,2025-07-07 09:20:51,2025-07-07 09:29:38,Fulton St & Broadway,4006,NYU - University Pl & E 8 St,3003,Subscriber,Male,1987,35887,73.9,Weekday
+120,805,2025-02-11 16:41:12,2025-02-11 16:54:37,Broadway & Battery Pl,4005,NYU - University Pl & E 8 St,3003,Customer,Male,1993,32672,35.0,Weekday
+121,818,2025-09-04 10:07:58,2025-09-04 10:21:36,Cedar St & Broadway,4010,Broadway & Battery Pl,4005,Subscriber,Male,1993,36869,35.0,Weekend
+122,916,2025-02-12 07:44:50,2025-02-12 08:00:06,Whitehall St & South Ferry,4013,Vesey St & Church St,4009,Subscriber,Male,1989,38599,35.0,Weekday
+123,403,2025-11-16 08:37:46,2025-11-16 08:44:29,City College - Convent Ave & W 138 St,3007,Park Row & City Hall,4004,Subscriber,Male,1999,36511,73.5,Weekday
+124,772,2025-09-12 10:09:20,2025-09-12 10:22:12,Vesey St & Church St,4009,Broadway & Battery Pl,4005,Customer,Male,1986,33747,46.1,Weekend
+125,566,2025-04-24 17:51:29,2025-04-24 18:00:55,Broad St & Bridge St,4007,Vesey St & Church St,4009,Subscriber,Male,1966,30685,35.0,Weekday
+126,1006,2025-05-31 10:31:10,2025-05-31 10:47:56,Rector St & Greenwich St,4011,Chambers St & West St,4003,Customer,Female,1991,38789,59.9,Weekday
+127,681,2025-03-29 20:12:21,2025-03-29 20:23:42,Whitehall St & South Ferry,4013,Vesey St & Church St,4009,Customer,Male,1993,33754,84.6,Weekend
+128,606,2025-12-30 13:02:00,2025-12-30 13:12:06,Park Row & City Hall,4004,John St & William St,4015,Subscriber,Male,2001,36019,81.7,Weekend
+129,722,2025-04-22 16:08:51,2025-04-22 16:20:53,Rector St & Greenwich St,4011,NYU - University Pl & E 8 St,3003,Subscriber,Male,1993,32979,43.7,Weekday
+130,781,2025-04-11 08:03:46,2025-04-11 08:16:47,Broad St & Bridge St,4007,Murray St & West St,4008,Customer,Female,1983,39596,54.4,Weekday
+131,3887,2025-01-14 09:23:36,2025-01-14 10:28:23,Broad St & Bridge St,4007,Hunter College - Lexington & E 68 St,3005,Subscriber,Male,1982,34431,88.4,Weekday
+132,604,2025-06-01 16:11:29,2025-06-01 16:21:33,Vesey St & Church St,4009,NYU - University Pl & E 8 St,3003,Subscriber,Male,1982,35433,67.8,Weekday
+133,757,2025-11-09 20:53:44,2025-11-09 21:06:21,Park Row & City Hall,4004,Pearl St & Hanover Sq,4012,Subscriber,Male,1994,31283,72.3,Weekend
+134,660,2025-12-03 09:44:50,2025-12-03 09:55:50,City College - Convent Ave & W 138 St,3007,Broad St & Bridge St,4007,Subscriber,Female,1982,36900,46.0,Weekday
+135,121,2025-03-31 10:38:38,2025-03-31 10:40:39,Rector St & Greenwich St,4011,John St & William St,4015,Subscriber,Male,1980,35105,80.5,Weekday
+136,721,2025-09-27 16:09:15,2025-09-27 16:21:16,Broadway & Battery Pl,4005,Wall St & William St,4001,Customer,Male,1978,32014,35.0,Weekend
+137,551,2025-06-27 07:26:06,2025-06-27 07:35:17,Whitehall St & South Ferry,4013,Broadway & Battery Pl,4005,Subscriber,Male,1983,39614,62.7,Weekday
+138,603,2025-05-11 18:25:36,2025-05-11 18:35:39,Broadway & Battery Pl,4005,Rector St & Greenwich St,4011,Subscriber,Female,1978,31938,76.1,Weekday
+139,387,2025-12-20 10:57:42,2025-12-20 11:04:09,Whitehall St & South Ferry,4013,Broadway & Battery Pl,4005,Subscriber,Male,1977,36566,73.0,Weekday
+140,706,2025-11-26 10:15:47,2025-11-26 10:27:33,Broad St & Bridge St,4007,Cedar St & Broadway,4010,Subscriber,Male,1985,33750,35.0,Weekend
+141,633,2025-08-02 18:55:39,2025-08-02 19:06:12,City College - Convent Ave & W 138 St,3007,Fulton St & Broadway,4006,Subscriber,Unknown,1999,31749,51.9,Weekday
+142,667,2025-08-15 17:38:51,2025-08-15 17:49:58,Beekman St & Nassau St,4014,Broadway & Battery Pl,4005,Subscriber,Male,1980,36744,35.0,Weekday
+143,699,2025-02-16 18:47:45,2025-02-16 18:59:24,The New School - W 12 St & 6 Ave,3009,John St & William St,4015,Subscriber,Male,1999,35223,35.0,Weekday
+144,656,2025-08-08 07:54:07,2025-08-08 08:05:03,Broad St & Bridge St,4007,Murray St & West St,4008,Subscriber,Male,1985,30612,57.7,Weekday
+145,1024,2025-06-11 12:27:37,2025-06-11 12:44:41,Fulton St & Broadway,4006,City College - Convent Ave & W 138 St,3007,Customer,Female,1991,31529,75.7,Weekend
+146,718,2025-12-30 10:08:20,2025-12-30 10:20:18,Hunter College - Lexington & E 68 St,3005,The New School - W 12 St & 6 Ave,3009,Subscriber,Female,1985,39346,35.0,Weekday
+147,723,2025-09-30 13:43:10,2025-09-30 13:55:13,Fulton St & Broadway,4006,Columbia University - Broadway & W 116 St,3001,Customer,Male,2005,37950,68.7,Weekend
+148,559,2025-05-04 07:07:54,2025-05-04 07:17:13,The New School - W 12 St & 6 Ave,3009,Pearl St & Hanover Sq,4012,Customer,Male,1990,39046,46.9,Weekday
+149,475,2025-07-29 09:32:05,2025-07-29 09:40:00,Rector St & Greenwich St,4011,Rector St & Greenwich St,4011,Subscriber,Male,1994,37418,79.2,Weekday
+150,370,2025-03-25 07:24:39,2025-03-25 07:30:49,NYU - University Pl & E 8 St,3003,Cedar St & Broadway,4010,Subscriber,Male,1984,36999,73.0,Weekday
+151,667,2025-05-04 18:56:59,2025-05-04 19:08:06,Broad St & Bridge St,4007,Pearl St & Hanover Sq,4012,Customer,Male,1998,32990,57.7,Weekday
+152,521,2025-08-15 07:58:13,2025-08-15 08:06:54,The New School - W 12 St & 6 Ave,3009,City College - Convent Ave & W 138 St,3007,Subscriber,Male,1984,30040,65.3,Weekday
+153,432,2025-11-21 19:19:36,2025-11-21 19:26:48,Vesey St & Church St,4009,NYU - University Pl & E 8 St,3003,Subscriber,Male,1988,37851,79.5,Weekday
+154,696,2025-06-28 10:54:06,2025-06-28 11:05:42,The New School - W 12 St & 6 Ave,3009,Broadway & Battery Pl,4005,Subscriber,Female,2002,30771,39.2,Weekday
+155,656,2025-08-02 07:17:16,2025-08-02 07:28:12,Broad St & Bridge St,4007,Murray St & West St,4008,Subscriber,Unknown,1987,36716,41.1,Weekday
+156,918,2025-02-18 17:48:07,2025-02-18 18:03:25,Hunter College - Lexington & E 68 St,3005,Fulton St & Broadway,4006,Subscriber,Unknown,1997,34650,35.0,Weekday
+157,810,2025-02-10 09:23:20,2025-02-10 09:36:50,Murray St & West St,4008,Whitehall St & South Ferry,4013,Subscriber,Male,1986,32866,54.3,Weekend
+158,709,2025-04-19 20:47:32,2025-04-19 20:59:21,Murray St & West St,4008,Vesey St & Church St,4009,Subscriber,Male,1993,36246,58.8,Weekend
+159,723,2025-05-27 20:39:19,2025-05-27 20:51:22,Cedar St & Broadway,4010,Cedar St & Broadway,4010,Customer,Male,1975,33808,78.4,Weekend
+160,591,2025-06-04 16:01:28,2025-06-04 16:11:19,Cedar St & Broadway,4010,Chambers St & West St,4003,Subscriber,Male,1984,30386,59.0,Weekday
+161,482,2025-03-03 07:30:24,2025-03-03 07:38:26,Columbia University - Broadway & W 116 St,3001,Broadway & Battery Pl,4005,Customer,Male,1986,37446,53.4,Weekday
+162,619,2025-07-14 20:43:14,2025-07-14 20:53:33,The New School - W 12 St & 6 Ave,3009,Broad St & Bridge St,4007,Customer,Male,1982,35160,55.4,Weekend
+163,414,2025-02-25 07:00:46,2025-02-25 07:07:40,Rector St & Greenwich St,4011,City College - Convent Ave & W 138 St,3007,Subscriber,Male,1983,35906,60.9,Weekday
+164,578,2025-07-23 17:00:30,2025-07-23 17:10:08,Whitehall St & South Ferry,4013,Hunter College - Lexington & E 68 St,3005,Subscriber,Male,1975,35744,35.0,Weekday
+165,483,2025-02-20 08:05:58,2025-02-20 08:14:01,Vesey St & Church St,4009,Hunter College - Lexington & E 68 St,3005,Subscriber,Unknown,1986,36268,64.5,Weekday
+166,355,2025-05-06 10:16:44,2025-05-06 10:22:39,Fulton St & Broadway,4006,The New School - W 12 St & 6 Ave,3009,Subscriber,Unknown,1990,33807,63.5,Weekday
+167,594,2025-12-20 19:44:50,2025-12-20 19:54:44,Fulton St & Broadway,4006,Broadway & Battery Pl,4005,Subscriber,Male,1981,34857,38.6,Weekday
+168,444,2025-09-30 09:59:17,2025-09-30 10:06:41,Whitehall St & South Ferry,4013,Murray St & West St,4008,Subscriber,Female,1976,32151,72.3,Weekday
+169,445,2025-05-20 17:20:53,2025-05-20 17:28:18,Park Row & City Hall,4004,The New School - W 12 St & 6 Ave,3009,Subscriber,Male,1990,36538,67.3,Weekday
+170,727,2025-03-16 07:23:22,2025-03-16 07:35:29,City College - Convent Ave & W 138 St,3007,Broadway & Battery Pl,4005,Subscriber,Female,1987,34494,38.8,Weekday
+171,508,2025-09-17 18:44:34,2025-09-17 18:53:02,Park Row & City Hall,4004,Beekman St & Nassau St,4014,Subscriber,Male,1990,33119,67.0,Weekday
+172,1359,2025-01-22 14:42:02,2025-01-22 15:04:41,The New School - W 12 St & 6 Ave,3009,Whitehall St & South Ferry,4013,Subscriber,Female,1989,33637,35.0,Weekend
+173,4170,2025-01-01 18:36:12,2025-01-01 19:45:42,Fulton St & Broadway,4006,Pearl St & Hanover Sq,4012,Customer,Female,1996,39959,50.5,Weekday
+174,896,2025-03-16 11:07:02,2025-03-16 11:21:58,Cedar St & Broadway,4010,Columbia University - Broadway & W 116 St,3001,Subscriber,Female,1997,39101,41.4,Weekend
+175,960,2025-11-18 10:25:12,2025-11-18 10:41:12,Chambers St & West St,4003,Vesey St & Church St,4009,Customer,Unknown,1986,32555,35.3,Weekend
+176,615,2025-08-21 13:12:20,2025-08-21 13:22:35,Murray St & West St,4008,Cedar St & Broadway,4010,Subscriber,Male,1994,37570,68.6,Weekend
+177,741,2025-02-22 19:14:21,2025-02-22 19:26:42,Broad St & Bridge St,4007,Whitehall St & South Ferry,4013,Subscriber,Male,1996,36846,51.5,Weekday
+178,702,2025-03-20 07:30:48,2025-03-20 07:42:30,Vesey St & Church St,4009,Beekman St & Nassau St,4014,Subscriber,Male,1978,37161,37.6,Weekday
+179,712,2025-06-11 20:03:35,2025-06-11 20:15:27,Broad St & Bridge St,4007,Wall St & William St,4001,Subscriber,Female,1984,39010,71.6,Weekend
+180,912,2025-01-13 16:32:23,2025-01-13 16:47:35,Vesey St & Church St,4009,Murray St & West St,4008,Subscriber,Male,1993,38043,35.0,Weekday
+181,594,2025-12-21 18:47:17,2025-12-21 18:57:11,Cedar St & Broadway,4010,Broadway & Battery Pl,4005,Customer,Male,1978,37935,50.9,Weekday
+182,990,2025-04-10 16:22:44,2025-04-10 16:39:14,Whitehall St & South Ferry,4013,Chambers St & West St,4003,Subscriber,Female,2002,31772,35.0,Weekday
+183,829,2025-08-15 16:56:48,2025-08-15 17:10:37,City College - Convent Ave & W 138 St,3007,Beekman St & Nassau St,4014,Subscriber,Female,1994,34213,74.1,Weekday
+184,613,2025-01-24 19:24:35,2025-01-24 19:34:48,Liberty St & Broadway,4016,Fulton St & Broadway,4006,Customer,Male,1994,31401,77.5,Weekend
+185,611,2025-08-12 16:24:32,2025-08-12 16:34:43,Broadway & Battery Pl,4005,Pearl St & Hanover Sq,4012,Subscriber,Female,1985,36198,66.1,Weekday
+186,745,2025-06-09 09:07:32,2025-06-09 09:19:57,John St & William St,4015,Murray St & West St,4008,Subscriber,Male,2005,38835,35.0,Weekday
+187,871,2025-01-28 14:40:16,2025-01-28 14:54:47,Beekman St & Nassau St,4014,NYU - University Pl & E 8 St,3003,Customer,Male,1993,35690,35.0,Weekend
+188,796,2025-11-17 09:46:51,2025-11-17 10:00:07,Cedar St & Broadway,4010,Fulton St & Broadway,4006,Subscriber,Male,1984,30215,55.3,Weekend
+189,1181,2025-03-02 18:20:45,2025-03-02 18:40:26,Liberty St & Broadway,4016,Broadway & Battery Pl,4005,Customer,Male,1971,37557,38.3,Weekend
+190,546,2025-06-10 07:47:10,2025-06-10 07:56:16,Chambers St & West St,4003,Cedar St & Broadway,4010,Subscriber,Male,1975,39738,55.9,Weekday
+191,714,2025-06-03 17:03:43,2025-06-03 17:15:37,Cedar St & Broadway,4010,Pearl St & Hanover Sq,4012,Subscriber,Male,1980,30882,35.0,Weekday
+192,809,2025-04-04 09:42:38,2025-04-04 09:56:07,Wall St & William St,4001,Broad St & Bridge St,4007,Customer,Male,1992,33667,43.3,Weekend
+193,803,2025-04-01 17:36:26,2025-04-01 17:49:49,Broad St & Bridge St,4007,Murray St & West St,4008,Subscriber,Male,1988,34444,39.8,Weekday
+194,965,2025-04-27 17:34:34,2025-04-27 17:50:39,Rector St & Greenwich St,4011,City College - Convent Ave & W 138 St,3007,Subscriber,Male,1973,33696,60.9,Weekday
+195,721,2025-07-12 07:21:33,2025-07-12 07:33:34,Wall St & William St,4001,Beekman St & Nassau St,4014,Customer,Unknown,1979,31772,58.3,Weekday
+196,578,2025-11-23 08:39:04,2025-11-23 08:48:42,Pearl St & Hanover Sq,4012,John St & William St,4015,Customer,Male,1997,34557,35.0,Weekday
+197,524,2025-07-14 16:26:39,2025-07-14 16:35:23,Liberty St & Broadway,4016,Beekman St & Nassau St,4014,Subscriber,Male,1988,33607,64.7,Weekend
+198,538,2025-06-18 07:56:59,2025-06-18 08:05:57,Chambers St & West St,4003,Whitehall St & South Ferry,4013,Subscriber,Male,1986,35445,71.0,Weekday
+199,357,2025-07-09 16:24:47,2025-07-09 16:30:44,Murray St & West St,4008,Chambers St & West St,4003,Customer,Male,1970,30205,70.9,Weekday
+200,529,2025-10-14 08:09:31,2025-10-14 08:18:20,Liberty St & Broadway,4016,City College - Convent Ave & W 138 St,3007,Subscriber,Unknown,2003,34538,64.1,Weekday
+201,253,2025-11-17 18:24:50,2025-11-17 18:29:03,Wall St & William St,4001,Broad St & Bridge St,4007,Subscriber,Male,1984,31104,83.3,Weekday
+202,834,2025-11-09 09:33:58,2025-11-09 09:47:52,Vesey St & Church St,4009,Rector St & Greenwich St,4011,Customer,Male,1990,30680,35.0,Weekend
+203,483,2025-09-28 10:31:31,2025-09-28 10:39:34,Broad St & Bridge St,4007,Liberty St & Broadway,4016,Subscriber,Unknown,1969,31151,56.6,Weekday
+204,980,2025-12-05 14:56:32,2025-12-05 15:12:52,Hunter College - Lexington & E 68 St,3005,Liberty St & Broadway,4016,Customer,Male,1991,38112,45.0,Weekend
+205,809,2025-11-09 16:07:06,2025-11-09 16:20:35,Fulton St & Broadway,4006,Pearl St & Hanover Sq,4012,Subscriber,Female,2002,33277,55.9,Weekday
+206,538,2025-04-07 16:56:27,2025-04-07 17:05:25,Murray St & West St,4008,John St & William St,4015,Subscriber,Male,1977,36989,65.7,Weekday
+207,547,2025-10-16 16:19:53,2025-10-16 16:29:00,Columbia University - Broadway & W 116 St,3001,Beekman St & Nassau St,4014,Subscriber,Male,1990,32438,48.2,Weekday
+208,606,2025-06-18 16:17:25,2025-06-18 16:27:31,Hunter College - Lexington & E 68 St,3005,Liberty St & Broadway,4016,Subscriber,Male,1991,33802,42.4,Weekday
+209,613,2025-06-06 18:37:19,2025-06-06 18:47:32,Hunter College - Lexington & E 68 St,3005,Fulton St & Broadway,4006,Customer,Female,1980,32600,55.2,Weekday
+210,559,2025-08-21 09:35:58,2025-08-21 09:45:17,Broadway & Battery Pl,4005,Hunter College - Lexington & E 68 St,3005,Subscriber,Male,1976,32555,77.5,Weekday
+211,902,2025-10-11 07:48:44,2025-10-11 08:03:46,Hunter College - Lexington & E 68 St,3005,Fulton St & Broadway,4006,Subscriber,Female,1974,39283,36.1,Weekday
+212,825,2025-12-07 17:27:46,2025-12-07 17:41:31,Park Row & City Hall,4004,Columbia University - Broadway & W 116 St,3001,Customer,Male,1979,33676,53.1,Weekend
+213,675,2025-05-31 18:31:51,2025-05-31 18:43:06,Park Row & City Hall,4004,Whitehall St & South Ferry,4013,Subscriber,Male,1978,35166,54.3,Weekday
+214,553,2025-10-31 18:09:17,2025-10-31 18:18:30,John St & William St,4015,The New School - W 12 St & 6 Ave,3009,Subscriber,Male,1982,39765,42.2,Weekday
+215,939,2025-03-14 16:05:42,2025-03-14 16:21:21,Liberty St & Broadway,4016,Vesey St & Church St,4009,Subscriber,Female,1986,38024,56.2,Weekday
+216,477,2025-08-18 08:39:35,2025-08-18 08:47:32,Wall St & William St,4001,The New School - W 12 St & 6 Ave,3009,Subscriber,Male,2001,35738,64.4,Weekday
+217,1189,2025-01-03 14:49:56,2025-01-03 15:09:45,NYU - University Pl & E 8 St,3003,Broad St & Bridge St,4007,Subscriber,Female,1987,37552,59.2,Weekend
+218,1186,2025-07-15 20:59:26,2025-07-15 21:19:12,The New School - W 12 St & 6 Ave,3009,The New School - W 12 St & 6 Ave,3009,Subscriber,Female,1997,34841,35.0,Weekend
+219,580,2025-12-02 07:48:20,2025-12-02 07:58:00,Liberty St & Broadway,4016,Liberty St & Broadway,4016,Subscriber,Female,2000,36972,79.7,Weekday
+220,469,2025-10-12 18:36:22,2025-10-12 18:44:11,Park Row & City Hall,4004,Chambers St & West St,4003,Subscriber,Male,1985,32700,81.4,Weekday
+221,682,2025-09-03 09:29:16,2025-09-03 09:40:38,Murray St & West St,4008,Vesey St & Church St,4009,Subscriber,Male,1999,34733,67.3,Weekend
+222,389,2025-05-27 17:14:27,2025-05-27 17:20:56,John St & William St,4015,Fulton St & Broadway,4006,Subscriber,Male,1986,35783,55.5,Weekday
+223,488,2025-12-20 09:12:53,2025-12-20 09:21:01,Liberty St & Broadway,4016,Columbia University - Broadway & W 116 St,3001,Subscriber,Male,2005,31920,52.0,Weekday
+224,359,2025-11-01 18:52:00,2025-11-01 18:57:59,Beekman St & Nassau St,4014,Pearl St & Hanover Sq,4012,Subscriber,Male,1986,31776,78.8,Weekday
+225,549,2025-03-14 19:55:00,2025-03-14 20:04:09,Pearl St & Hanover Sq,4012,Hunter College - Lexington & E 68 St,3005,Subscriber,Male,1978,37260,77.5,Weekday
+226,1200,2025-01-30 17:39:17,2025-01-30 17:59:17,Park Row & City Hall,4004,Murray St & West St,4008,Subscriber,Male,1984,38575,60.2,Weekend
+227,746,2025-01-20 19:28:58,2025-01-20 19:41:24,City College - Convent Ave & W 138 St,3007,Rector St & Greenwich St,4011,Subscriber,Female,1990,39961,67.4,Weekday
+228,496,2025-03-03 19:48:08,2025-03-03 19:56:24,Hunter College - Lexington & E 68 St,3005,City College - Convent Ave & W 138 St,3007,Subscriber,Male,1984,30670,67.5,Weekday
+229,274,2025-12-21 13:18:43,2025-12-21 13:23:17,Liberty St & Broadway,4016,Pearl St & Hanover Sq,4012,Subscriber,Male,1999,33612,74.7,Weekend
+230,876,2025-03-03 08:11:41,2025-03-03 08:26:17,Liberty St & Broadway,4016,Wall St & William St,4001,Subscriber,Female,1989,33516,37.2,Weekday
+231,789,2025-07-26 09:25:01,2025-07-26 09:38:10,Vesey St & Church St,4009,Park Row & City Hall,4004,Customer,Male,1990,36539,73.3,Weekend
+232,459,2025-04-20 16:26:35,2025-04-20 16:34:14,John St & William St,4015,Whitehall St & South Ferry,4013,Subscriber,Male,2000,37957,90.9,Weekday
+233,349,2025-03-04 17:05:20,2025-03-04 17:11:09,Liberty St & Broadway,4016,City College - Convent Ave & W 138 St,3007,Subscriber,Male,2002,38799,77.2,Weekday
+234,445,2025-09-15 19:10:32,2025-09-15 19:17:57,Vesey St & Church St,4009,Cedar St & Broadway,4010,Subscriber,Male,2005,31205,73.2,Weekday
+235,896,2025-05-23 09:34:51,2025-05-23 09:49:47,Pearl St & Hanover Sq,4012,Liberty St & Broadway,4016,Subscriber,Unknown,1991,32964,35.0,Weekend
+236,639,2025-07-27 13:20:09,2025-07-27 13:30:48,Liberty St & Broadway,4016,Pearl St & Hanover Sq,4012,Customer,Male,1998,30067,86.7,Weekend
+237,1080,2025-07-02 20:04:58,2025-07-02 20:22:58,Pearl St & Hanover Sq,4012,NYU - University Pl & E 8 St,3003,Subscriber,Male,2005,34996,43.4,Weekend
+238,623,2025-03-16 13:43:04,2025-03-16 13:53:27,Broadway & Battery Pl,4005,Whitehall St & South Ferry,4013,Customer,Male,1977,33414,77.0,Weekend
+239,1032,2025-08-02 10:46:16,2025-08-02 11:03:28,Cedar St & Broadway,4010,Fulton St & Broadway,4006,Customer,Male,2004,34749,40.8,Weekend
+240,904,2025-10-19 17:25:10,2025-10-19 17:40:14,Wall St & William St,4001,Broad St & Bridge St,4007,Subscriber,Male,1971,38135,62.6,Weekday
+241,647,2025-11-14 09:06:15,2025-11-14 09:17:02,Broadway & Battery Pl,4005,Park Row & City Hall,4004,Customer,Male,1980,37212,45.2,Weekday
+242,445,2025-11-05 15:11:48,2025-11-05 15:19:13,Pearl St & Hanover Sq,4012,Broadway & Battery Pl,4005,Customer,Unknown,1984,33856,70.9,Weekend
+243,670,2025-08-04 18:31:51,2025-08-04 18:43:01,Park Row & City Hall,4004,Cedar St & Broadway,4010,Subscriber,Male,1984,36628,38.2,Weekend
+244,597,2025-02-08 10:48:35,2025-02-08 10:58:32,Cedar St & Broadway,4010,Park Row & City Hall,4004,Subscriber,Male,1983,38828,35.0,Weekday
+245,455,2025-04-06 17:04:37,2025-04-06 17:12:12,Rector St & Greenwich St,4011,City College - Convent Ave & W 138 St,3007,Subscriber,Male,1979,31289,78.2,Weekday
+246,368,2025-09-22 17:12:24,2025-09-22 17:18:32,Hunter College - Lexington & E 68 St,3005,Murray St & West St,4008,Customer,Male,1986,30687,76.2,Weekday
+247,449,2025-07-27 07:11:43,2025-07-27 07:19:12,Wall St & William St,4001,Rector St & Greenwich St,4011,Subscriber,Male,1996,33109,73.5,Weekday
+248,893,2025-07-07 18:13:30,2025-07-07 18:28:23,Park Row & City Hall,4004,Pearl St & Hanover Sq,4012,Customer,Male,2005,34405,73.1,Weekend
+249,476,2025-07-27 17:31:37,2025-07-27 17:39:33,Cedar St & Broadway,4010,Vesey St & Church St,4009,Subscriber,Male,1985,36855,80.4,Weekday
+250,627,2025-12-11 18:40:30,2025-12-11 18:50:57,Broad St & Bridge St,4007,Cedar St & Broadway,4010,Customer,Male,1982,34820,38.9,Weekday
+251,1178,2025-09-30 16:57:07,2025-09-30 17:16:45,City College - Convent Ave & W 138 St,3007,Vesey St & Church St,4009,Subscriber,Female,1967,36129,44.9,Weekend
+252,954,2025-10-13 15:12:31,2025-10-13 15:28:25,Vesey St & Church St,4009,Park Row & City Hall,4004,Customer,Unknown,1997,30497,35.0,Weekend
+253,414,2025-02-22 18:51:29,2025-02-22 18:58:23,Beekman St & Nassau St,4014,Broad St & Bridge St,4007,Subscriber,Male,2003,34512,77.3,Weekday
+254,857,2025-03-13 19:11:00,2025-03-13 19:25:17,Liberty St & Broadway,4016,Columbia University - Broadway & W 116 St,3001,Customer,Female,1990,33303,35.0,Weekend
+255,742,2025-04-12 16:44:50,2025-04-12 16:57:12,Hunter College - Lexington & E 68 St,3005,Whitehall St & South Ferry,4013,Subscriber,Male,2005,34917,38.0,Weekday
+256,494,2025-01-28 08:37:54,2025-01-28 08:46:08,Park Row & City Hall,4004,Broad St & Bridge St,4007,Subscriber,Male,2003,37538,77.1,Weekday
+257,544,2025-03-24 08:59:34,2025-03-24 09:08:38,Wall St & William St,4001,Broad St & Bridge St,4007,Subscriber,Male,2005,35869,72.4,Weekday
+258,507,2025-07-03 10:30:23,2025-07-03 10:38:50,Wall St & William St,4001,Fulton St & Broadway,4006,Subscriber,Male,1983,39590,69.1,Weekday
+259,787,2025-11-19 16:04:02,2025-11-19 16:17:09,Chambers St & West St,4003,Hunter College - Lexington & E 68 St,3005,Customer,Male,1995,33354,77.8,Weekend
+260,890,2025-05-09 17:24:01,2025-05-09 17:38:51,City College - Convent Ave & W 138 St,3007,Broadway & Battery Pl,4005,Subscriber,Female,1980,34765,46.1,Weekday
+261,1098,2025-10-29 17:20:23,2025-10-29 17:38:41,Broadway & Battery Pl,4005,Whitehall St & South Ferry,4013,Customer,Female,1969,39080,77.8,Weekend
+262,477,2025-08-30 08:24:51,2025-08-30 08:32:48,Pearl St & Hanover Sq,4012,Pearl St & Hanover Sq,4012,Subscriber,Male,1995,31008,79.4,Weekday
+263,641,2025-04-18 10:38:25,2025-04-18 10:49:06,Fulton St & Broadway,4006,Vesey St & Church St,4009,Subscriber,Male,1994,30890,78.1,Weekday
+264,743,2025-02-09 13:46:00,2025-02-09 13:58:23,Beekman St & Nassau St,4014,Broadway & Battery Pl,4005,Subscriber,Male,1983,33904,35.0,Weekend
+265,605,2025-06-15 07:47:13,2025-06-15 07:57:18,Rector St & Greenwich St,4011,Rector St & Greenwich St,4011,Subscriber,Female,1976,34524,89.4,Weekday
+266,1035,2025-08-05 10:25:46,2025-08-05 10:43:01,The New School - W 12 St & 6 Ave,3009,Rector St & Greenwich St,4011,Subscriber,Female,1982,30985,35.0,Weekend
+267,528,2025-01-19 18:42:46,2025-01-19 18:51:34,NYU - University Pl & E 8 St,3003,Beekman St & Nassau St,4014,Subscriber,Male,1989,31003,56.1,Weekday
+268,882,2025-10-15 12:12:05,2025-10-15 12:26:47,Broadway & Battery Pl,4005,City College - Convent Ave & W 138 St,3007,Subscriber,Male,1983,39343,44.5,Weekend
+269,686,2025-05-16 19:14:42,2025-05-16 19:26:08,City College - Convent Ave & W 138 St,3007,Park Row & City Hall,4004,Subscriber,Male,1972,33558,35.0,Weekday
+270,518,2025-06-22 18:04:29,2025-06-22 18:13:07,Vesey St & Church St,4009,Murray St & West St,4008,Subscriber,Unknown,1976,38069,36.8,Weekday
+271,971,2025-04-22 16:58:02,2025-04-22 17:14:13,City College - Convent Ave & W 138 St,3007,City College - Convent Ave & W 138 St,3007,Customer,Female,1994,33177,69.4,Weekend
+272,776,2025-05-30 19:54:10,2025-05-30 20:07:06,Broadway & Battery Pl,4005,City College - Convent Ave & W 138 St,3007,Customer,Male,1976,30972,46.2,Weekday
+273,1006,2025-10-08 20:33:44,2025-10-08 20:50:30,City College - Convent Ave & W 138 St,3007,Murray St & West St,4008,Customer,Female,1997,37415,35.0,Weekend
+274,542,2025-01-11 16:20:21,2025-01-11 16:29:23,John St & William St,4015,Fulton St & Broadway,4006,Subscriber,Male,1982,34780,47.9,Weekday
+275,594,2025-05-24 17:56:43,2025-05-24 18:06:37,John St & William St,4015,NYU - University Pl & E 8 St,3003,Subscriber,Unknown,1987,34586,41.4,Weekday
+276,683,2025-03-04 19:59:11,2025-03-04 20:10:34,City College - Convent Ave & W 138 St,3007,Vesey St & Church St,4009,Subscriber,Female,1997,30140,71.3,Weekday
+277,787,2025-10-20 11:14:35,2025-10-20 11:27:42,Beekman St & Nassau St,4014,Whitehall St & South Ferry,4013,Subscriber,Male,1996,35555,69.4,Weekend
+278,468,2025-12-22 17:44:18,2025-12-22 17:52:06,Fulton St & Broadway,4006,Liberty St & Broadway,4016,Subscriber,Male,1974,34566,56.8,Weekday
+279,878,2025-05-28 17:31:03,2025-05-28 17:45:41,The New School - W 12 St & 6 Ave,3009,City College - Convent Ave & W 138 St,3007,Customer,Female,1979,33121,63.8,Weekend
+280,497,2025-12-07 16:30:18,2025-12-07 16:38:35,Hunter College - Lexington & E 68 St,3005,The New School - W 12 St & 6 Ave,3009,Subscriber,Male,1994,39822,65.6,Weekday
+281,673,2025-04-17 19:00:10,2025-04-17 19:11:23,Broadway & Battery Pl,4005,Fulton St & Broadway,4006,Subscriber,Male,2005,30886,35.6,Weekday
+282,593,2025-01-12 09:41:26,2025-01-12 09:51:19,Liberty St & Broadway,4016,Beekman St & Nassau St,4014,Subscriber,Male,1997,32229,35.0,Weekday
+283,560,2025-12-27 17:41:46,2025-12-27 17:51:06,Whitehall St & South Ferry,4013,Liberty St & Broadway,4016,Subscriber,Male,1984,31269,57.3,Weekday
+284,818,2025-06-25 10:38:59,2025-06-25 10:52:37,Broadway & Battery Pl,4005,Beekman St & Nassau St,4014,Subscriber,Male,1999,34673,47.0,Weekday
+285,820,2025-11-30 16:17:23,2025-11-30 16:31:03,Vesey St & Church St,4009,NYU - University Pl & E 8 St,3003,Subscriber,Male,2005,33981,44.9,Weekday
+286,747,2025-05-28 10:37:02,2025-05-28 10:49:29,Broad St & Bridge St,4007,Wall St & William St,4001,Customer,Male,1996,30662,71.9,Weekend
+287,505,2025-12-03 16:22:13,2025-12-03 16:30:38,Pearl St & Hanover Sq,4012,The New School - W 12 St & 6 Ave,3009,Subscriber,Male,1977,32364,65.0,Weekday
+288,935,2025-12-19 16:30:34,2025-12-19 16:46:09,City College - Convent Ave & W 138 St,3007,Whitehall St & South Ferry,4013,Subscriber,Female,1981,38976,35.0,Weekday
+289,795,2025-03-13 18:00:19,2025-03-13 18:13:34,The New School - W 12 St & 6 Ave,3009,Liberty St & Broadway,4016,Subscriber,Female,1977,37754,61.7,Weekday
+290,885,2025-01-29 11:32:02,2025-01-29 11:46:47,Pearl St & Hanover Sq,4012,Pearl St & Hanover Sq,4012,Subscriber,Unknown,2000,35594,52.2,Weekend
+291,937,2025-12-08 09:18:07,2025-12-08 09:33:44,Broadway & Battery Pl,4005,Broadway & Battery Pl,4005,Subscriber,Female,2005,32035,60.7,Weekday
+292,623,2025-06-03 08:26:10,2025-06-03 08:36:33,Park Row & City Hall,4004,Broad St & Bridge St,4007,Subscriber,Male,1978,32657,49.9,Weekday
+293,681,2025-05-20 09:50:52,2025-05-20 10:02:13,John St & William St,4015,Liberty St & Broadway,4016,Subscriber,Male,1998,35540,37.0,Weekday
+294,692,2025-10-06 08:27:42,2025-10-06 08:39:14,Cedar St & Broadway,4010,Vesey St & Church St,4009,Subscriber,Female,1996,38504,83.7,Weekday
+295,539,2025-04-16 09:46:52,2025-04-16 09:55:51,Hunter College - Lexington & E 68 St,3005,Columbia University - Broadway & W 116 St,3001,Subscriber,Female,1985,36719,44.5,Weekday
+296,952,2025-11-04 07:00:43,2025-11-04 07:16:35,Murray St & West St,4008,Fulton St & Broadway,4006,Subscriber,Male,1982,31211,38.1,Weekday
+297,755,2025-10-10 19:13:56,2025-10-10 19:26:31,Pearl St & Hanover Sq,4012,City College - Convent Ave & W 138 St,3007,Subscriber,Male,1979,35275,43.6,Weekday
+298,798,2025-01-18 08:52:06,2025-01-18 09:05:24,Hunter College - Lexington & E 68 St,3005,City College - Convent Ave & W 138 St,3007,Subscriber,Female,1998,36396,77.0,Weekday
+299,662,2025-12-23 17:56:41,2025-12-23 18:07:43,Murray St & West St,4008,Vesey St & Church St,4009,Subscriber,Male,1983,32080,35.0,Weekday
+300,589,2025-07-05 07:43:58,2025-07-05 07:53:47,John St & William St,4015,Chambers St & West St,4003,Subscriber,Unknown,1986,34675,67.0,Weekday
+301,2993,2025-06-28 18:48:08,2025-06-28 19:38:01,Chambers St & West St,4003,NYU - University Pl & E 8 St,3003,Customer,Female,1985,39145,73.2,Weekday
+302,758,2025-12-05 08:27:28,2025-12-05 08:40:06,The New School - W 12 St & 6 Ave,3009,Fulton St & Broadway,4006,Subscriber,Male,1976,38226,35.0,Weekday
+303,698,2025-11-29 09:47:08,2025-11-29 09:58:46,Beekman St & Nassau St,4014,John St & William St,4015,Subscriber,Female,1988,33899,66.5,Weekday
+304,857,2025-06-03 17:47:13,2025-06-03 18:01:30,NYU - University Pl & E 8 St,3003,Broadway & Battery Pl,4005,Subscriber,Female,1985,37080,35.0,Weekday
+305,4009,2025-08-20 19:19:27,2025-08-20 20:26:16,The New School - W 12 St & 6 Ave,3009,Broad St & Bridge St,4007,Subscriber,Male,1984,37235,35.0,Weekday
+306,598,2025-03-07 08:54:44,2025-03-07 09:04:42,Hunter College - Lexington & E 68 St,3005,Park Row & City Hall,4004,Subscriber,Female,1992,34270,54.5,Weekday
+307,805,2025-02-14 20:23:40,2025-02-14 20:37:05,NYU - University Pl & E 8 St,3003,Rector St & Greenwich St,4011,Customer,Male,1997,34658,35.0,Weekend
+308,432,2025-10-21 15:59:53,2025-10-21 16:07:05,Vesey St & Church St,4009,John St & William St,4015,Customer,Male,1982,36671,81.3,Weekend
+309,344,2025-12-18 17:12:42,2025-12-18 17:18:26,Beekman St & Nassau St,4014,Cedar St & Broadway,4010,Subscriber,Male,1976,33729,87.0,Weekday
+310,756,2025-05-14 09:08:52,2025-05-14 09:21:28,Columbia University - Broadway & W 116 St,3001,Chambers St & West St,4003,Subscriber,Female,1986,32156,35.0,Weekday
+311,337,2025-02-07 17:44:10,2025-02-07 17:49:47,The New School - W 12 St & 6 Ave,3009,Vesey St & Church St,4009,Subscriber,Male,1969,31677,64.8,Weekday
+312,678,2025-07-09 07:35:24,2025-07-09 07:46:42,The New School - W 12 St & 6 Ave,3009,Hunter College - Lexington & E 68 St,3005,Subscriber,Male,2005,32476,54.8,Weekday
+313,859,2025-12-02 10:39:54,2025-12-02 10:54:13,NYU - University Pl & E 8 St,3003,Pearl St & Hanover Sq,4012,Subscriber,Female,1979,35521,57.2,Weekday
+314,686,2025-05-17 08:03:16,2025-05-17 08:14:42,Broad St & Bridge St,4007,Wall St & William St,4001,Subscriber,Male,2001,30271,35.0,Weekday
+315,4166,2025-04-15 19:02:47,2025-04-15 20:12:13,Fulton St & Broadway,4006,The New School - W 12 St & 6 Ave,3009,Subscriber,Male,1988,37533,48.4,Weekday
+316,921,2025-05-10 17:55:59,2025-05-10 18:11:20,Hunter College - Lexington & E 68 St,3005,Hunter College - Lexington & E 68 St,3005,Subscriber,Female,1995,30790,42.5,Weekday
+317,574,2025-01-13 08:38:27,2025-01-13 08:48:01,Fulton St & Broadway,4006,Cedar St & Broadway,4010,Subscriber,Male,1991,31129,80.5,Weekday
+318,562,2025-11-14 16:40:03,2025-11-14 16:49:25,Park Row & City Hall,4004,Beekman St & Nassau St,4014,Subscriber,Male,1995,34312,63.4,Weekend
+319,411,2025-08-08 19:51:18,2025-08-08 19:58:09,John St & William St,4015,Whitehall St & South Ferry,4013,Subscriber,Male,1985,31577,60.0,Weekday
+320,741,2025-10-11 09:10:37,2025-10-11 09:22:58,Murray St & West St,4008,Fulton St & Broadway,4006,Subscriber,Female,1980,35308,52.7,Weekday
+321,685,2025-07-19 19:53:03,2025-07-19 20:04:28,Fulton St & Broadway,4006,Chambers St & West St,4003,Subscriber,Female,1988,30378,63.6,Weekday
+322,510,2025-06-14 07:58:16,2025-06-14 08:06:46,Murray St & West St,4008,Columbia University - Broadway & W 116 St,3001,Subscriber,Male,1997,31412,80.8,Weekday
+323,984,2025-01-27 10:35:54,2025-01-27 10:52:18,Liberty St & Broadway,4016,Hunter College - Lexington & E 68 St,3005,Subscriber,Female,1996,37943,35.0,Weekend
+324,3706,2025-12-15 10:17:53,2025-12-15 11:19:39,Beekman St & Nassau St,4014,Broadway & Battery Pl,4005,Customer,Male,1973,31990,62.4,Weekend
+325,849,2025-04-03 12:20:52,2025-04-03 12:35:01,Beekman St & Nassau St,4014,Wall St & William St,4001,Customer,Male,1986,31045,35.0,Weekend
+326,702,2025-07-20 16:41:56,2025-07-20 16:53:38,Rector St & Greenwich St,4011,Whitehall St & South Ferry,4013,Customer,Male,1999,35953,48.6,Weekday
+327,570,2025-01-01 19:03:03,2025-01-01 19:12:33,Broad St & Bridge St,4007,NYU - University Pl & E 8 St,3003,Subscriber,Male,1991,33153,70.3,Weekday
+328,395,2025-04-23 16:42:38,2025-04-23 16:49:13,Wall St & William St,4001,Fulton St & Broadway,4006,Subscriber,Male,1987,34284,71.3,Weekday
+329,691,2025-10-23 17:21:57,2025-10-23 17:33:28,Murray St & West St,4008,John St & William St,4015,Customer,Male,1987,30192,38.4,Weekday
+330,794,2025-01-24 15:18:21,2025-01-24 15:31:35,Chambers St & West St,4003,Broad St & Bridge St,4007,Subscriber,Male,1977,33768,35.4,Weekend
+331,478,2025-09-04 08:16:37,2025-09-04 08:24:35,John St & William St,4015,Broad St & Bridge St,4007,Subscriber,Unknown,1984,34493,51.1,Weekday
+332,422,2025-01-26 19:27:00,2025-01-26 19:34:02,Vesey St & Church St,4009,Hunter College - Lexington & E 68 St,3005,Subscriber,Male,1980,30585,54.5,Weekday
+333,662,2025-01-16 18:31:18,2025-01-16 18:42:20,Hunter College - Lexington & E 68 St,3005,Chambers St & West St,4003,Subscriber,Male,1988,30001,62.8,Weekday
+334,804,2025-10-06 18:25:12,2025-10-06 18:38:36,Fulton St & Broadway,4006,Murray St & West St,4008,Subscriber,Female,1988,33918,50.0,Weekday
+335,919,2025-03-20 11:22:28,2025-03-20 11:37:47,Liberty St & Broadway,4016,City College - Convent Ave & W 138 St,3007,Subscriber,Male,1981,38737,35.0,Weekend
+336,1035,2025-05-06 10:16:32,2025-05-06 10:33:47,Murray St & West St,4008,Hunter College - Lexington & E 68 St,3005,Subscriber,Female,1993,34078,48.4,Weekday
+337,553,2025-05-07 10:49:06,2025-05-07 10:58:19,Vesey St & Church St,4009,Pearl St & Hanover Sq,4012,Subscriber,Male,1994,33672,38.0,Weekday
+338,1090,2025-05-25 16:36:56,2025-05-25 16:55:06,NYU - University Pl & E 8 St,3003,Columbia University - Broadway & W 116 St,3001,Subscriber,Female,1986,33201,48.0,Weekend
+339,765,2025-03-15 16:16:17,2025-03-15 16:29:02,Columbia University - Broadway & W 116 St,3001,City College - Convent Ave & W 138 St,3007,Subscriber,Female,1996,30495,86.0,Weekday
+340,651,2025-08-05 08:25:45,2025-08-05 08:36:36,Wall St & William St,4001,Broadway & Battery Pl,4005,Customer,Female,1986,36481,72.3,Weekday
+341,1171,2025-11-04 12:52:53,2025-11-04 13:12:24,Columbia University - Broadway & W 116 St,3001,Fulton St & Broadway,4006,Subscriber,Female,1968,39261,35.0,Weekend
+342,737,2025-03-12 17:13:42,2025-03-12 17:25:59,Beekman St & Nassau St,4014,Columbia University - Broadway & W 116 St,3001,Customer,Male,1984,32713,41.7,Weekend
+343,505,2025-02-13 07:12:13,2025-02-13 07:20:38,Rector St & Greenwich St,4011,Vesey St & Church St,4009,Customer,Male,1993,39943,66.8,Weekday
+344,813,2025-10-03 19:45:02,2025-10-03 19:58:35,Fulton St & Broadway,4006,Pearl St & Hanover Sq,4012,Subscriber,Male,1992,37489,42.3,Weekend
+345,359,2025-09-03 13:50:39,2025-09-03 13:56:38,Park Row & City Hall,4004,NYU - University Pl & E 8 St,3003,Customer,Unknown,1987,35190,76.8,Weekend
+346,518,2025-09-28 09:28:05,2025-09-28 09:36:43,Broadway & Battery Pl,4005,Broad St & Bridge St,4007,Subscriber,Male,1991,34500,75.0,Weekday
+347,479,2025-04-29 10:40:09,2025-04-29 10:48:08,Broad St & Bridge St,4007,Park Row & City Hall,4004,Subscriber,Unknown,1979,31936,64.2,Weekend
+348,395,2025-01-12 07:09:33,2025-01-12 07:16:08,Park Row & City Hall,4004,Columbia University - Broadway & W 116 St,3001,Customer,Male,1978,30773,70.2,Weekday
+349,424,2025-04-22 19:35:28,2025-04-22 19:42:32,Liberty St & Broadway,4016,Murray St & West St,4008,Subscriber,Male,1983,39065,68.6,Weekday
+350,576,2025-03-27 10:09:54,2025-03-27 10:19:30,Broad St & Bridge St,4007,Beekman St & Nassau St,4014,Subscriber,Male,1989,39661,75.4,Weekday
+351,491,2025-02-08 19:32:58,2025-02-08 19:41:09,Chambers St & West St,4003,Wall St & William St,4001,Subscriber,Male,2000,38119,43.2,Weekday
+352,782,2025-01-18 09:36:33,2025-01-18 09:49:35,Whitehall St & South Ferry,4013,Pearl St & Hanover Sq,4012,Customer,Male,1999,38787,50.4,Weekend
+353,624,2025-06-26 09:01:57,2025-06-26 09:12:21,Broad St & Bridge St,4007,Beekman St & Nassau St,4014,Subscriber,Male,1990,33235,66.4,Weekday
+354,481,2025-11-05 07:07:17,2025-11-05 07:15:18,Cedar St & Broadway,4010,City College - Convent Ave & W 138 St,3007,Customer,Female,1997,34152,36.7,Weekday
+355,665,2025-09-15 18:36:06,2025-09-15 18:47:11,The New School - W 12 St & 6 Ave,3009,John St & William St,4015,Customer,Male,1990,33159,37.7,Weekday
+356,260,2025-06-27 18:41:55,2025-06-27 18:46:15,City College - Convent Ave & W 138 St,3007,Broadway & Battery Pl,4005,Subscriber,Male,1989,36782,85.0,Weekday
+357,432,2025-08-25 16:48:26,2025-08-25 16:55:38,Park Row & City Hall,4004,Rector St & Greenwich St,4011,Customer,Male,1987,39702,70.5,Weekday
+358,435,2025-10-11 19:34:04,2025-10-11 19:41:19,The New School - W 12 St & 6 Ave,3009,City College - Convent Ave & W 138 St,3007,Subscriber,Female,2005,30877,77.3,Weekday
+359,848,2025-06-15 18:04:28,2025-06-15 18:18:36,Beekman St & Nassau St,4014,Pearl St & Hanover Sq,4012,Subscriber,Female,1993,33666,35.0,Weekday
+360,519,2025-03-02 16:17:42,2025-03-02 16:26:21,City College - Convent Ave & W 138 St,3007,Beekman St & Nassau St,4014,Subscriber,Male,1990,34002,64.6,Weekday
+361,519,2025-01-01 18:31:25,2025-01-01 18:40:04,Chambers St & West St,4003,Broadway & Battery Pl,4005,Customer,Male,1980,37952,53.1,Weekday
+362,698,2025-08-27 18:46:39,2025-08-27 18:58:17,Hunter College - Lexington & E 68 St,3005,Cedar St & Broadway,4010,Customer,Female,1990,32607,71.8,Weekday
+363,629,2025-07-14 17:48:21,2025-07-14 17:58:50,Vesey St & Church St,4009,Whitehall St & South Ferry,4013,Subscriber,Male,1991,35233,53.2,Weekday
+364,705,2025-05-25 10:36:12,2025-05-25 10:47:57,Wall St & William St,4001,Murray St & West St,4008,Subscriber,Male,1979,30402,70.6,Weekend
+365,606,2025-09-23 19:41:40,2025-09-23 19:51:46,City College - Convent Ave & W 138 St,3007,City College - Convent Ave & W 138 St,3007,Subscriber,Female,1986,30452,46.8,Weekday
+366,554,2025-09-22 07:04:57,2025-09-22 07:14:11,Pearl St & Hanover Sq,4012,John St & William St,4015,Subscriber,Male,1997,33645,35.8,Weekday
+367,555,2025-11-09 07:06:57,2025-11-09 07:16:12,Broad St & Bridge St,4007,Broad St & Bridge St,4007,Subscriber,Male,1988,38283,62.7,Weekday
+368,590,2025-02-26 11:32:00,2025-02-26 11:41:50,Murray St & West St,4008,Liberty St & Broadway,4016,Subscriber,Male,1993,31410,71.7,Weekend
+369,488,2025-11-18 11:18:55,2025-11-18 11:27:03,Vesey St & Church St,4009,Hunter College - Lexington & E 68 St,3005,Subscriber,Male,1999,38070,89.1,Weekend
+370,765,2025-02-05 19:44:03,2025-02-05 19:56:48,Pearl St & Hanover Sq,4012,Liberty St & Broadway,4016,Subscriber,Female,2005,36117,35.0,Weekday
+371,473,2025-01-17 17:23:10,2025-01-17 17:31:03,City College - Convent Ave & W 138 St,3007,Broadway & Battery Pl,4005,Subscriber,Male,2005,35398,78.9,Weekday
+372,418,2025-04-19 07:09:46,2025-04-19 07:16:44,Whitehall St & South Ferry,4013,Broadway & Battery Pl,4005,Subscriber,Female,1998,36522,68.4,Weekday
+373,984,2025-06-11 18:35:17,2025-06-11 18:51:41,Whitehall St & South Ferry,4013,Beekman St & Nassau St,4014,Customer,Female,1993,36654,38.2,Weekday
+374,405,2025-10-31 10:37:54,2025-10-31 10:44:39,Vesey St & Church St,4009,John St & William St,4015,Subscriber,Unknown,1982,34163,86.4,Weekday
+375,980,2025-05-02 09:03:06,2025-05-02 09:19:26,Columbia University - Broadway & W 116 St,3001,Murray St & West St,4008,Subscriber,Female,2005,30317,35.0,Weekend
+376,527,2025-09-28 17:05:49,2025-09-28 17:14:36,Pearl St & Hanover Sq,4012,Chambers St & West St,4003,Subscriber,Male,1987,38177,72.4,Weekday
+377,664,2025-02-21 17:18:04,2025-02-21 17:29:08,Broad St & Bridge St,4007,Fulton St & Broadway,4006,Customer,Male,1990,33557,35.0,Weekday
+378,543,2025-11-20 19:05:16,2025-11-20 19:14:19,Park Row & City Hall,4004,City College - Convent Ave & W 138 St,3007,Subscriber,Male,2001,39959,65.1,Weekend
+379,483,2025-08-04 16:19:38,2025-08-04 16:27:41,Chambers St & West St,4003,Vesey St & Church St,4009,Subscriber,Male,1990,31036,68.6,Weekday
+380,487,2025-01-05 08:10:06,2025-01-05 08:18:13,Whitehall St & South Ferry,4013,Vesey St & Church St,4009,Subscriber,Unknown,1968,32164,35.0,Weekday
+381,620,2025-07-18 18:16:44,2025-07-18 18:27:04,Chambers St & West St,4003,Hunter College - Lexington & E 68 St,3005,Subscriber,Male,1983,38060,35.0,Weekday
+382,700,2025-08-27 16:38:17,2025-08-27 16:49:57,Broad St & Bridge St,4007,NYU - University Pl & E 8 St,3003,Subscriber,Female,1982,35285,68.3,Weekday
+383,750,2025-06-12 08:27:01,2025-06-12 08:39:31,Park Row & City Hall,4004,Fulton St & Broadway,4006,Subscriber,Male,1994,31932,43.8,Weekday
+384,816,2025-07-06 17:04:22,2025-07-06 17:17:58,City College - Convent Ave & W 138 St,3007,Chambers St & West St,4003,Customer,Female,1993,39179,60.6,Weekday
+385,432,2025-12-24 08:10:26,2025-12-24 08:17:38,Rector St & Greenwich St,4011,Pearl St & Hanover Sq,4012,Subscriber,Male,2004,37718,53.8,Weekday
+386,1073,2025-03-25 11:50:01,2025-03-25 12:07:54,Pearl St & Hanover Sq,4012,City College - Convent Ave & W 138 St,3007,Subscriber,Female,1995,34305,48.0,Weekend
+387,888,2025-11-22 19:48:02,2025-11-22 20:02:50,Rector St & Greenwich St,4011,The New School - W 12 St & 6 Ave,3009,Subscriber,Female,1980,30969,46.5,Weekday
+388,655,2025-05-24 16:02:51,2025-05-24 16:13:46,Fulton St & Broadway,4006,Vesey St & Church St,4009,Subscriber,Male,1983,34958,35.0,Weekday
+389,500,2025-07-18 14:20:07,2025-07-18 14:28:27,Pearl St & Hanover Sq,4012,NYU - University Pl & E 8 St,3003,Customer,Male,1980,31982,93.9,Weekend
+390,927,2025-03-21 10:19:44,2025-03-21 10:35:11,Vesey St & Church St,4009,Cedar St & Broadway,4010,Subscriber,Male,1996,38740,44.9,Weekday
+391,535,2025-08-08 19:22:28,2025-08-08 19:31:23,Vesey St & Church St,4009,Pearl St & Hanover Sq,4012,Customer,Male,1971,36697,71.1,Weekday
+392,447,2025-05-05 08:05:52,2025-05-05 08:13:19,Pearl St & Hanover Sq,4012,Cedar St & Broadway,4010,Subscriber,Male,1992,39793,53.0,Weekday
+393,614,2025-02-15 18:10:23,2025-02-15 18:20:37,Chambers St & West St,4003,Murray St & West St,4008,Subscriber,Male,1976,35077,65.2,Weekday
+394,630,2025-08-31 17:14:15,2025-08-31 17:24:45,The New School - W 12 St & 6 Ave,3009,Columbia University - Broadway & W 116 St,3001,Subscriber,Male,2004,31294,43.9,Weekday
+395,553,2025-11-11 15:02:11,2025-11-11 15:11:24,Liberty St & Broadway,4016,John St & William St,4015,Subscriber,Unknown,1996,32096,77.8,Weekend
+396,1280,2025-10-13 14:35:56,2025-10-13 14:57:16,NYU - University Pl & E 8 St,3003,Broadway & Battery Pl,4005,Customer,Female,1980,34534,57.7,Weekend
+397,653,2025-03-09 10:51:52,2025-03-09 11:02:45,Wall St & William St,4001,The New School - W 12 St & 6 Ave,3009,Subscriber,Male,1984,37633,79.7,Weekday
+398,766,2025-03-14 18:13:48,2025-03-14 18:26:34,Broad St & Bridge St,4007,NYU - University Pl & E 8 St,3003,Subscriber,Male,1989,30100,35.0,Weekday
+399,304,2025-05-20 16:06:13,2025-05-20 16:11:17,Hunter College - Lexington & E 68 St,3005,Columbia University - Broadway & W 116 St,3001,Subscriber,Unknown,1980,37926,81.4,Weekday
+400,661,2025-07-04 16:49:13,2025-07-04 17:00:14,Rector St & Greenwich St,4011,Fulton St & Broadway,4006,Subscriber,Male,1986,35016,35.0,Weekday
+401,534,2025-04-24 17:41:37,2025-04-24 17:50:31,Beekman St & Nassau St,4014,Rector St & Greenwich St,4011,Customer,Male,1987,39644,41.3,Weekday
+402,333,2025-03-10 18:44:08,2025-03-10 18:49:41,Broadway & Battery Pl,4005,Pearl St & Hanover Sq,4012,Subscriber,Unknown,1988,39247,79.2,Weekday
+403,942,2025-05-21 15:43:34,2025-05-21 15:59:16,Chambers St & West St,4003,Murray St & West St,4008,Customer,Female,1976,30470,41.7,Weekend
+404,572,2025-04-16 10:09:55,2025-04-16 10:19:27,Columbia University - Broadway & W 116 St,3001,Murray St & West St,4008,Subscriber,Male,1995,38874,39.1,Weekday
+405,447,2025-07-05 07:41:11,2025-07-05 07:48:38,John St & William St,4015,Chambers St & West St,4003,Subscriber,Male,2001,32032,80.7,Weekday
+406,687,2025-09-12 20:29:07,2025-09-12 20:40:34,NYU - University Pl & E 8 St,3003,Beekman St & Nassau St,4014,Subscriber,Male,1985,39825,65.9,Weekend
+407,626,2025-06-16 10:40:32,2025-06-16 10:50:58,Broadway & Battery Pl,4005,Park Row & City Hall,4004,Subscriber,Female,2005,38146,78.3,Weekday
+408,568,2025-06-10 19:22:32,2025-06-10 19:32:00,Murray St & West St,4008,Chambers St & West St,4003,Customer,Male,2003,31770,35.0,Weekend
+409,677,2025-08-04 10:26:40,2025-08-04 10:37:57,NYU - University Pl & E 8 St,3003,Pearl St & Hanover Sq,4012,Customer,Female,1985,31095,36.4,Weekend
+410,619,2025-03-30 16:20:40,2025-03-30 16:30:59,The New School - W 12 St & 6 Ave,3009,Wall St & William St,4001,Subscriber,Female,1984,39609,86.9,Weekday
+411,1058,2025-11-19 10:38:08,2025-11-19 10:55:46,City College - Convent Ave & W 138 St,3007,NYU - University Pl & E 8 St,3003,Subscriber,Female,1994,35579,37.8,Weekend
+412,748,2025-06-22 19:47:23,2025-06-22 19:59:51,City College - Convent Ave & W 138 St,3007,The New School - W 12 St & 6 Ave,3009,Subscriber,Unknown,1990,33170,35.0,Weekday
+413,722,2025-11-18 17:30:50,2025-11-18 17:42:52,Rector St & Greenwich St,4011,Cedar St & Broadway,4010,Subscriber,Female,1981,37399,79.0,Weekday
+414,586,2025-02-13 10:27:44,2025-02-13 10:37:30,Columbia University - Broadway & W 116 St,3001,Pearl St & Hanover Sq,4012,Subscriber,Male,1988,31040,58.9,Weekday
+415,1088,2025-06-10 15:29:45,2025-06-10 15:47:53,City College - Convent Ave & W 138 St,3007,Hunter College - Lexington & E 68 St,3005,Subscriber,Female,1968,35796,35.0,Weekend
+416,883,2025-12-07 12:37:19,2025-12-07 12:52:02,Pearl St & Hanover Sq,4012,NYU - University Pl & E 8 St,3003,Subscriber,Male,1993,39752,38.8,Weekend
+417,668,2025-04-04 16:33:21,2025-04-04 16:44:29,Broad St & Bridge St,4007,Broadway & Battery Pl,4005,Subscriber,Male,1990,39420,39.0,Weekday
+418,796,2025-07-24 16:41:38,2025-07-24 16:54:54,City College - Convent Ave & W 138 St,3007,Liberty St & Broadway,4016,Subscriber,Female,1982,35720,64.1,Weekday
+419,477,2025-10-19 07:04:21,2025-10-19 07:12:18,City College - Convent Ave & W 138 St,3007,Broadway & Battery Pl,4005,Subscriber,Male,1979,33401,80.5,Weekday
+420,600,2025-10-06 17:42:16,2025-10-06 17:52:16,City College - Convent Ave & W 138 St,3007,The New School - W 12 St & 6 Ave,3009,Subscriber,Male,2001,32233,57.5,Weekend
+421,781,2025-07-08 17:16:18,2025-07-08 17:29:19,Park Row & City Hall,4004,Chambers St & West St,4003,Subscriber,Male,1987,39186,42.6,Weekday
+422,517,2025-01-12 09:48:20,2025-01-12 09:56:57,Cedar St & Broadway,4010,City College - Convent Ave & W 138 St,3007,Subscriber,Unknown,1992,38106,66.9,Weekday
+423,521,2025-04-13 07:54:00,2025-04-13 08:02:41,Cedar St & Broadway,4010,Wall St & William St,4001,Subscriber,Male,1989,39316,57.8,Weekday
+424,901,2025-09-30 17:39:35,2025-09-30 17:54:36,Liberty St & Broadway,4016,Vesey St & Church St,4009,Subscriber,Female,1999,33513,40.8,Weekday
+425,741,2025-02-22 10:34:42,2025-02-22 10:47:03,Broad St & Bridge St,4007,Liberty St & Broadway,4016,Subscriber,Male,1990,33870,42.4,Weekday
+426,1042,2025-05-10 12:14:51,2025-05-10 12:32:13,John St & William St,4015,John St & William St,4015,Subscriber,Male,1981,38405,42.1,Weekend
+427,581,2025-11-19 13:38:13,2025-11-19 13:47:54,Rector St & Greenwich St,4011,John St & William St,4015,Subscriber,Male,1993,37095,69.1,Weekend
+428,832,2025-11-30 19:08:56,2025-11-30 19:22:48,The New School - W 12 St & 6 Ave,3009,Fulton St & Broadway,4006,Subscriber,Female,1993,34466,50.1,Weekday
+429,1044,2025-08-25 08:01:14,2025-08-25 08:18:38,Chambers St & West St,4003,Columbia University - Broadway & W 116 St,3001,Subscriber,Male,2001,38598,35.0,Weekday
+430,630,2025-08-22 09:51:28,2025-08-22 10:01:58,John St & William St,4015,Cedar St & Broadway,4010,Subscriber,Male,1988,33867,35.0,Weekday
+431,239,2025-10-13 19:38:46,2025-10-13 19:42:45,Whitehall St & South Ferry,4013,Park Row & City Hall,4004,Subscriber,Male,1976,39497,81.5,Weekday
+432,361,2025-01-07 17:27:04,2025-01-07 17:33:05,Liberty St & Broadway,4016,Park Row & City Hall,4004,Customer,Male,1982,36035,78.0,Weekday
+433,633,2025-10-31 16:41:24,2025-10-31 16:51:57,Vesey St & Church St,4009,Hunter College - Lexington & E 68 St,3005,Subscriber,Male,1991,33110,83.3,Weekday
+434,699,2025-07-23 17:05:42,2025-07-23 17:17:21,Vesey St & Church St,4009,Fulton St & Broadway,4006,Subscriber,Male,1997,36906,54.6,Weekday
+435,757,2025-09-03 10:32:46,2025-09-03 10:45:23,John St & William St,4015,NYU - University Pl & E 8 St,3003,Subscriber,Unknown,1986,37173,42.1,Weekday
+436,654,2025-03-28 09:49:06,2025-03-28 10:00:00,Park Row & City Hall,4004,Columbia University - Broadway & W 116 St,3001,Subscriber,Male,1985,37630,35.0,Weekday
+437,4087,2025-06-12 07:45:37,2025-06-12 08:53:44,Cedar St & Broadway,4010,Hunter College - Lexington & E 68 St,3005,Subscriber,Male,2002,39351,74.0,Weekday
+438,640,2025-07-05 16:04:09,2025-07-05 16:14:49,Vesey St & Church St,4009,NYU - University Pl & E 8 St,3003,Subscriber,Male,1990,33845,38.8,Weekday
+439,440,2025-01-11 17:53:35,2025-01-11 18:00:55,Wall St & William St,4001,Liberty St & Broadway,4016,Subscriber,Male,1963,33622,60.8,Weekday
+440,733,2025-01-22 16:10:55,2025-01-22 16:23:08,Columbia University - Broadway & W 116 St,3001,City College - Convent Ave & W 138 St,3007,Subscriber,Female,1992,39952,35.0,Weekday
+441,679,2025-10-19 07:23:43,2025-10-19 07:35:02,Murray St & West St,4008,Murray St & West St,4008,Subscriber,Male,1994,36273,37.3,Weekday
+442,733,2025-09-27 09:24:12,2025-09-27 09:36:25,Whitehall St & South Ferry,4013,Rector St & Greenwich St,4011,Customer,Male,1997,31014,35.0,Weekday
+443,1088,2025-06-16 13:54:49,2025-06-16 14:12:57,Rector St & Greenwich St,4011,Broad St & Bridge St,4007,Customer,Male,1990,38789,35.2,Weekend
+444,872,2025-12-28 16:48:58,2025-12-28 17:03:30,Pearl St & Hanover Sq,4012,Columbia University - Broadway & W 116 St,3001,Subscriber,Male,1969,38445,42.5,Weekday
+445,682,2025-03-20 07:38:41,2025-03-20 07:50:03,Wall St & William St,4001,Pearl St & Hanover Sq,4012,Subscriber,Female,1979,32735,67.2,Weekday
+446,402,2025-12-12 10:21:30,2025-12-12 10:28:12,Chambers St & West St,4003,Rector St & Greenwich St,4011,Subscriber,Male,2001,30393,47.2,Weekday
+447,698,2025-10-05 16:58:19,2025-10-05 17:09:57,Whitehall St & South Ferry,4013,Wall St & William St,4001,Customer,Male,1986,32738,74.1,Weekend
+448,714,2025-07-08 09:58:37,2025-07-08 10:10:31,NYU - University Pl & E 8 St,3003,Broad St & Bridge St,4007,Subscriber,Female,1980,37379,35.0,Weekday
+449,572,2025-12-24 17:58:40,2025-12-24 18:08:12,Whitehall St & South Ferry,4013,Whitehall St & South Ferry,4013,Subscriber,Unknown,1998,30686,51.2,Weekday
+450,714,2025-10-30 14:15:07,2025-10-30 14:27:01,Vesey St & Church St,4009,Park Row & City Hall,4004,Subscriber,Male,2001,32739,79.2,Weekend
+451,757,2025-05-07 08:16:28,2025-05-07 08:29:05,Wall St & William St,4001,Whitehall St & South Ferry,4013,Subscriber,Male,1985,32374,37.5,Weekday
+452,507,2025-12-10 19:32:11,2025-12-10 19:40:38,Pearl St & Hanover Sq,4012,Broadway & Battery Pl,4005,Subscriber,Male,1988,35409,72.1,Weekday
+453,738,2025-05-04 11:06:37,2025-05-04 11:18:55,John St & William St,4015,Vesey St & Church St,4009,Customer,Female,1993,38071,73.2,Weekend
+454,760,2025-07-05 14:48:56,2025-07-05 15:01:36,John St & William St,4015,Broad St & Bridge St,4007,Customer,Unknown,2005,34260,41.9,Weekend
+455,692,2025-12-23 10:00:51,2025-12-23 10:12:23,Cedar St & Broadway,4010,Columbia University - Broadway & W 116 St,3001,Subscriber,Male,1979,32513,50.7,Weekday
+456,710,2025-01-06 10:20:12,2025-01-06 10:32:02,Wall St & William St,4001,Cedar St & Broadway,4010,Subscriber,Female,2004,34086,77.8,Weekday
+457,514,2025-10-02 07:01:14,2025-10-02 07:09:48,Broadway & Battery Pl,4005,Columbia University - Broadway & W 116 St,3001,Subscriber,Male,1994,30597,68.5,Weekday
+458,556,2025-11-19 18:50:48,2025-11-19 19:00:04,John St & William St,4015,Whitehall St & South Ferry,4013,Subscriber,Male,1979,39821,35.0,Weekday
+459,364,2025-11-26 09:59:05,2025-11-26 10:05:09,Whitehall St & South Ferry,4013,Murray St & West St,4008,Subscriber,Unknown,1962,34311,42.8,Weekday
+460,866,2025-12-12 16:50:23,2025-12-12 17:04:49,Hunter College - Lexington & E 68 St,3005,Vesey St & Church St,4009,Subscriber,Male,1982,38444,43.7,Weekend
+461,606,2025-05-21 08:40:57,2025-05-21 08:51:03,Wall St & William St,4001,Cedar St & Broadway,4010,Subscriber,Male,1990,35783,35.0,Weekday
+462,694,2025-11-15 09:14:44,2025-11-15 09:26:18,Beekman St & Nassau St,4014,Broadway & Battery Pl,4005,Customer,Male,1994,38795,49.1,Weekday
+463,662,2025-04-04 18:04:10,2025-04-04 18:15:12,Chambers St & West St,4003,Beekman St & Nassau St,4014,Customer,Male,1976,39280,35.0,Weekend
+464,588,2025-09-27 10:04:10,2025-09-27 10:13:58,Chambers St & West St,4003,Liberty St & Broadway,4016,Subscriber,Female,1984,38215,77.0,Weekday
+465,3640,2025-02-23 15:41:27,2025-02-23 16:42:07,Vesey St & Church St,4009,Vesey St & Church St,4009,Customer,Male,1993,31308,38.2,Weekend
+466,793,2025-05-10 07:29:55,2025-05-10 07:43:08,Hunter College - Lexington & E 68 St,3005,Fulton St & Broadway,4006,Subscriber,Male,1999,38934,43.9,Weekday
+467,635,2025-05-26 10:41:42,2025-05-26 10:52:17,NYU - University Pl & E 8 St,3003,Cedar St & Broadway,4010,Subscriber,Female,1960,33238,52.4,Weekday
+468,700,2025-08-27 10:59:17,2025-08-27 11:10:57,The New School - W 12 St & 6 Ave,3009,Pearl St & Hanover Sq,4012,Subscriber,Female,1999,31386,76.2,Weekday
+469,567,2025-02-04 17:38:09,2025-02-04 17:47:36,Broadway & Battery Pl,4005,The New School - W 12 St & 6 Ave,3009,Customer,Male,1986,30832,55.8,Weekend
+470,279,2025-07-10 17:59:48,2025-07-10 18:04:27,Liberty St & Broadway,4016,Rector St & Greenwich St,4011,Subscriber,Unknown,1990,34320,79.0,Weekend
+471,769,2025-11-03 19:37:41,2025-11-03 19:50:30,NYU - University Pl & E 8 St,3003,Broadway & Battery Pl,4005,Customer,Female,1977,31124,48.5,Weekday
+472,715,2025-12-09 07:33:59,2025-12-09 07:45:54,Rector St & Greenwich St,4011,Chambers St & West St,4003,Subscriber,Male,1999,38111,78.8,Weekday
+473,779,2025-12-20 16:13:10,2025-12-20 16:26:09,Rector St & Greenwich St,4011,Liberty St & Broadway,4016,Customer,Male,1984,35087,35.0,Weekday
+474,675,2025-01-20 19:08:01,2025-01-20 19:19:16,Liberty St & Broadway,4016,Whitehall St & South Ferry,4013,Subscriber,Male,2000,33203,40.9,Weekday
+475,841,2025-09-02 19:47:49,2025-09-02 20:01:50,Park Row & City Hall,4004,Broadway & Battery Pl,4005,Subscriber,Female,1993,36028,35.0,Weekday
+476,359,2025-11-22 17:03:25,2025-11-22 17:09:24,Rector St & Greenwich St,4011,Cedar St & Broadway,4010,Customer,Male,1974,39574,61.8,Weekday
+477,655,2025-06-08 18:41:40,2025-06-08 18:52:35,Wall St & William St,4001,Wall St & William St,4001,Customer,Male,2002,38163,35.0,Weekend
+478,482,2025-04-22 08:37:31,2025-04-22 08:45:33,Chambers St & West St,4003,NYU - University Pl & E 8 St,3003,Subscriber,Male,1975,32997,35.0,Weekday
+479,4647,2025-06-12 10:10:40,2025-06-12 11:28:07,Cedar St & Broadway,4010,Columbia University - Broadway & W 116 St,3001,Subscriber,Male,1989,35404,71.8,Weekend
+480,951,2025-05-16 11:02:43,2025-05-16 11:18:34,Chambers St & West St,4003,Whitehall St & South Ferry,4013,Customer,Female,2005,38190,43.4,Weekend
+481,533,2025-12-24 18:29:43,2025-12-24 18:38:36,John St & William St,4015,John St & William St,4015,Subscriber,Male,1991,39967,77.7,Weekday
+482,347,2025-04-16 16:38:27,2025-04-16 16:44:14,Whitehall St & South Ferry,4013,City College - Convent Ave & W 138 St,3007,Customer,Male,1980,32873,65.1,Weekday
+483,357,2025-05-23 19:32:16,2025-05-23 19:38:13,Beekman St & Nassau St,4014,Vesey St & Church St,4009,Subscriber,Male,1986,37325,83.5,Weekday
+484,4366,2025-03-04 17:42:48,2025-03-04 18:55:34,Liberty St & Broadway,4016,Pearl St & Hanover Sq,4012,Subscriber,Female,2005,39522,35.0,Weekday
+485,987,2025-09-06 17:43:10,2025-09-06 17:59:37,Whitehall St & South Ferry,4013,Rector St & Greenwich St,4011,Subscriber,Female,1981,36300,35.0,Weekday
+486,523,2025-05-13 15:24:07,2025-05-13 15:32:50,Broad St & Bridge St,4007,John St & William St,4015,Customer,Male,2001,30271,68.2,Weekend
+487,633,2025-10-10 09:48:04,2025-10-10 09:58:37,Beekman St & Nassau St,4014,Rector St & Greenwich St,4011,Subscriber,Male,1983,32130,64.0,Weekday
+488,2800,2025-01-23 18:58:20,2025-01-23 19:45:00,Park Row & City Hall,4004,Rector St & Greenwich St,4011,Subscriber,Male,1996,36152,35.0,Weekday
+489,998,2025-07-15 09:23:35,2025-07-15 09:40:13,City College - Convent Ave & W 138 St,3007,Whitehall St & South Ferry,4013,Customer,Female,2004,35874,37.4,Weekend
+490,762,2025-10-08 09:08:49,2025-10-08 09:21:31,Broadway & Battery Pl,4005,Broadway & Battery Pl,4005,Subscriber,Male,1999,31725,35.0,Weekday
+491,709,2025-01-09 17:29:49,2025-01-09 17:41:38,Wall St & William St,4001,Cedar St & Broadway,4010,Subscriber,Male,1986,36287,58.2,Weekday
+492,697,2025-03-15 11:22:48,2025-03-15 11:34:25,Columbia University - Broadway & W 116 St,3001,Pearl St & Hanover Sq,4012,Subscriber,Male,1974,33399,40.0,Weekend
+493,966,2025-07-26 16:59:01,2025-07-26 17:15:07,Liberty St & Broadway,4016,Fulton St & Broadway,4006,Subscriber,Female,1999,31403,64.5,Weekday
+494,584,2025-09-11 16:17:46,2025-09-11 16:27:30,Pearl St & Hanover Sq,4012,Rector St & Greenwich St,4011,Subscriber,Male,1991,34838,35.0,Weekday
+495,656,2025-06-05 13:54:02,2025-06-05 14:04:58,The New School - W 12 St & 6 Ave,3009,Cedar St & Broadway,4010,Customer,Unknown,1992,35873,39.5,Weekend
+496,1007,2025-06-10 14:48:56,2025-06-10 15:05:43,The New School - W 12 St & 6 Ave,3009,Murray St & West St,4008,Customer,Female,1980,37741,55.1,Weekend
+497,543,2025-10-17 19:56:34,2025-10-17 20:05:37,Chambers St & West St,4003,Park Row & City Hall,4004,Subscriber,Male,1999,30773,77.4,Weekday
+498,539,2025-12-23 10:33:37,2025-12-23 10:42:36,City College - Convent Ave & W 138 St,3007,John St & William St,4015,Subscriber,Male,1968,39753,75.1,Weekday
+499,599,2025-01-13 19:11:50,2025-01-13 19:21:49,Park Row & City Hall,4004,Broadway & Battery Pl,4005,Subscriber,Male,1999,38978,74.7,Weekend
+500,549,2025-07-15 18:24:30,2025-07-15 18:33:39,Vesey St & Church St,4009,Vesey St & Church St,4009,Customer,Unknown,1983,33182,56.2,Weekend
