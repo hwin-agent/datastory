@@ -1,6 +1,7 @@
 "use client";
 
 import type { Finding } from "@/lib/types";
+import { API_URL } from "@/lib/api";
 
 interface FindingCardProps {
   finding: Finding;
@@ -35,7 +36,7 @@ export default function FindingCard({ finding }: FindingCardProps) {
         <div className="my-4 border border-border rounded-[4px] overflow-hidden bg-chart-bg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={finding.chart_url}
+            src={finding.chart_url.startsWith("http") ? finding.chart_url : `${API_URL}${finding.chart_url}`}
             alt={`Chart for: ${finding.hypothesis}`}
             className="w-full h-auto"
           />
