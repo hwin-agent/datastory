@@ -22,16 +22,48 @@ def get_client() -> OpenAI:
     return _client
 
 
+# Model fallback chain: try glm-5.1 first, fall back to glm-5
+_MODEL_CHAIN = ["glm-5.1", "glm-5", "glm-4.7"]
+_active_model: str | None = None
+
+
+def _get_model() -> str:
+    """Return the active model, probing the chain on first call."""
+    global _active_model
+    if _active_model:
+        return _active_model
+    # Probe which model works
+    client = get_client()
+    for model in _MODEL_CHAIN:
+        try:
+            resp = client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": "Say OK"}],
+                max_tokens=5,
+            )
+            if resp.choices and resp.choices[0].message.content:
+                _active_model = model
+                print(f"[LLM] Using model: {model}")
+                return model
+        except Exception as e:
+            print(f"[LLM] Model {model} unavailable: {e}")
+            continue
+    # Last resort
+    _active_model = _MODEL_CHAIN[-1]
+    return _active_model
+
+
 def chat(
     messages: list[dict],
     temperature: float = 0.7,
     max_tokens: int = 4096,
     response_format: dict | None = None,
 ) -> str:
-    """Send a chat completion request to GLM 5.1."""
+    """Send a chat completion request to the best available GLM model."""
     client = get_client()
+    model = _get_model()
     kwargs: dict = {
-        "model": "glm-5.1",
+        "model": model,
         "messages": messages,
         "temperature": temperature,
         "max_tokens": max_tokens,
