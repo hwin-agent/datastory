@@ -18,6 +18,15 @@ from agent.narrator import generate_report
 from llm import chat
 
 
+async def _with_timeout(coro_or_thread, timeout_sec: int = 90):
+    """Run a coroutine with a timeout. Returns None on timeout."""
+    try:
+        return await asyncio.wait_for(coro_or_thread, timeout=timeout_sec)
+    except asyncio.TimeoutError:
+        print(f"[orchestrator] Operation timed out after {timeout_sec}s")
+        return None
+
+
 async def run_exploration(session: Session) -> AsyncGenerator[str, None]:
     """Run the full exploration pipeline, yielding SSE events."""
     try:
@@ -62,11 +71,13 @@ async def run_exploration(session: Session) -> AsyncGenerator[str, None]:
             finding = await asyncio.to_thread(test_hypothesis, df, h)
 
             if finding is not None:
-                # Generate insight with GLM
+                # Generate insight with GLM (with timeout)
                 if not finding.insight:
-                    finding.insight = await asyncio.to_thread(
-                        _generate_insight, finding
+                    insight = await _with_timeout(
+                        asyncio.to_thread(_generate_insight, finding),
+                        timeout_sec=30,
                     )
+                    finding.insight = insight or f"Statistically significant: {finding.effect_summary}"
 
                 # Generate chart
                 chart_path = await asyncio.to_thread(
@@ -100,9 +111,14 @@ async def run_exploration(session: Session) -> AsyncGenerator[str, None]:
         await asyncio.sleep(0.1)
 
         try:
-            dive_plan = await asyncio.to_thread(
-                select_deep_dive, session.findings, profile_text
+            dive_plan = await _with_timeout(
+                asyncio.to_thread(select_deep_dive, session.findings, profile_text),
+                timeout_sec=60,
             )
+            if dive_plan is None:
+                print("[orchestrator] Deep dive selection timed out, skipping")
+                raise TimeoutError("Deep dive selection timed out")
+
             parent_idx = dive_plan.get("finding_index", 0)
             if parent_idx >= len(session.findings):
                 parent_idx = 0
@@ -113,8 +129,9 @@ async def run_exploration(session: Session) -> AsyncGenerator[str, None]:
                 "parent_finding": parent.hypothesis,
             })
 
-            deep_finding = await asyncio.to_thread(
-                execute_deep_dive, df, parent, dive_plan
+            deep_finding = await _with_timeout(
+                asyncio.to_thread(execute_deep_dive, df, parent, dive_plan),
+                timeout_sec=60,
             )
 
             if deep_finding:
@@ -134,16 +151,35 @@ async def run_exploration(session: Session) -> AsyncGenerator[str, None]:
                     "is_deep_dive": True,
                 })
         except Exception as e:
-            print(f"Deep dive error: {e}")
+            print(f"[orchestrator] Deep dive error (non-fatal): {e}")
             traceback.print_exc()
 
         # === Step 5: Narrate ===
         yield _sse("status", {"step": "narrating", "message": "Writing data story..."})
         await asyncio.sleep(0.1)
 
-        report = await asyncio.to_thread(
-            generate_report, session.profile, session.findings, session.filename
+        report = await _with_timeout(
+            asyncio.to_thread(generate_report, session.profile, session.findings, session.filename),
+            timeout_sec=90,
         )
+        if report is None:
+            # Fallback: create a minimal report from findings
+            from models import Report, ReportSection
+            print("[orchestrator] Narrator timed out, generating fallback report")
+            sections = []
+            for f in session.findings:
+                sections.append(ReportSection(
+                    heading=f.hypothesis,
+                    body=f.insight or f"Statistical test ({f.test_type}) found a significant result with {f.effect_summary}.",
+                    chart_id=f.id,
+                ))
+            report = Report(
+                title=f"Data Story: {session.filename}",
+                executive_summary=f"Analysis of {session.profile.rows:,} rows across {session.profile.columns} columns revealed {len(session.findings)} significant findings.",
+                sections=sections,
+                methodology=f"Statistical tests included: {', '.join(set(f.test_type for f in session.findings))}.",
+                recommendations="Further investigation recommended based on these initial findings.",
+            )
         session.report = report
 
         yield _sse("report_ready", {
