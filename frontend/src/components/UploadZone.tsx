@@ -59,9 +59,12 @@ export default function UploadZone({ onFileSelected, disabled }: UploadZoneProps
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
       className={`
-        w-full max-w-xl border-2 border-dashed rounded-[6px] p-12
-        text-center cursor-pointer transition-colors
-        ${isDragOver ? "border-accent bg-surface" : "border-border hover:border-muted"}
+        w-full border-2 border-dashed rounded-[6px] py-10 px-8
+        cursor-pointer transition-all duration-200
+        ${isDragOver
+          ? "border-accent bg-accent/5 scale-[1.01]"
+          : "border-border hover:border-muted hover:bg-surface/50"
+        }
         ${disabled ? "opacity-50 pointer-events-none" : ""}
       `}
     >
@@ -73,9 +76,27 @@ export default function UploadZone({ onFileSelected, disabled }: UploadZoneProps
         onChange={handleChange}
         disabled={disabled}
       />
-      <p className="font-ui text-sm text-muted">
-        Drag and drop a CSV file here, or click to browse
-      </p>
+      <div className="flex flex-col items-center gap-3">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          className={`transition-colors duration-200 ${isDragOver ? "text-accent" : "text-muted/40"}`}
+        >
+          <rect x="6" y="4" width="20" height="24" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+          <path d="M10 12h12M10 16h8M10 20h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M6 9h4V4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <div className="text-center">
+          <p className="font-ui text-sm text-muted">
+            {isDragOver ? "Drop your CSV" : "Drop a CSV file here"}
+          </p>
+          <p className="font-ui text-xs text-muted/60 mt-1">
+            or click to browse &middot; up to 50 MB
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
