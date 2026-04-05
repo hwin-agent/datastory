@@ -78,12 +78,29 @@ ${el.innerHTML}
           </svg>
         </div>
         <p className="font-ui text-sm text-coral">{error || "Report not found"}</p>
-        <button
-          onClick={() => window.history.back()}
-          className="font-ui text-xs text-accent hover:text-accent-hover transition-colors"
-        >
-          Go back
-        </button>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => {
+              setError(null);
+              setLoading(true);
+              getReport(sessionId)
+                .then(setReport)
+                .catch((err) =>
+                  setError(err instanceof Error ? err.message : "Failed to load report")
+                )
+                .finally(() => setLoading(false));
+            }}
+            className="font-ui text-xs font-medium text-accent border border-accent/30 px-4 py-2 rounded-[4px] hover:border-accent hover:bg-accent/5 transition-all"
+          >
+            Retry
+          </button>
+          <button
+            onClick={() => window.history.back()}
+            className="font-ui text-xs text-muted hover:text-ink transition-colors"
+          >
+            Go back
+          </button>
+        </div>
       </div>
     );
   }

@@ -31,12 +31,29 @@ export async function uploadDemo(): Promise<{ session_id: string; rows: number; 
   return res.json();
 }
 
-export async function getReport(sessionId: string) {
-  const res = await fetch(`${API_URL}/api/report/${sessionId}`);
-  if (!res.ok) {
-    throw new Error(`Report fetch failed: ${res.statusText}`);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function getReport(sessionId: string, retries = 3): Promise<any> {
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(`${API_URL}/api/report/${sessionId}`);
+      if (res.ok) {
+        return res.json();
+      }
+      // Report not ready yet (404) — retry after delay
+      if (res.status === 404 && attempt < retries) {
+        await new Promise((r) => setTimeout(r, 2000 * (attempt + 1)));
+        continue;
+      }
+      throw new Error(`Report fetch failed (${res.status})`);
+    } catch (err) {
+      if (attempt < retries) {
+        await new Promise((r) => setTimeout(r, 2000 * (attempt + 1)));
+        continue;
+      }
+      throw err;
+    }
   }
-  return res.json();
+  throw new Error("Report fetch failed after retries");
 }
 
 export function chartImageUrl(sessionId: string, chartId: string): string {
