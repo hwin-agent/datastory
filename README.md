@@ -12,23 +12,9 @@
 
 ## Live Demo
 
-🔗 **[Try DataStory](https://datastory-demo.vercel.app)** (placeholder URL)
+**[datastory-demo.vercel.app](https://frontend-five-gold-79.vercel.app)**
 
-## Screenshots
-
-<!-- Add screenshots after first deploy -->
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Frontend | Next.js 15, TypeScript, Tailwind CSS |
-| Backend | FastAPI (Python 3.12) |
-| Agent LLM | GLM 5.1 via Z.ai API |
-| Data Analysis | pandas, scipy, numpy |
-| Visualization | matplotlib, seaborn |
-| Communication | Server-Sent Events (SSE) |
-| Deployment | Vercel (frontend) + Railway (backend) |
+Click **"Explore demo dataset"** to see the agent analyze 50,000 city bike-sharing trips in real time.
 
 ## How It Works
 
@@ -40,9 +26,30 @@ CSV Upload → Data Profiling → Hypothesis Generation (GLM 5.1)
 
 The agent uses GLM 5.1 at four critical points:
 - **Hypothesis generation**: Analyzes the data profile and proposes testable statistical hypotheses
-- **Test code generation**: Writes Python code for each statistical test
 - **Deep dive decision**: Autonomously selects the most interesting finding to investigate further
+- **Insight writing**: Generates specific, data-backed one-sentence insights for each finding
 - **Narrative writing**: Composes a complete, publishable data story incorporating all findings
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Next.js 16, TypeScript, Tailwind CSS 4 |
+| Backend | FastAPI (Python 3.12) |
+| Agent LLM | GLM 5.1 via Z.ai API (OpenAI-compatible) |
+| Data Analysis | pandas, scipy, numpy |
+| Visualization | matplotlib, seaborn |
+| Communication | Polling-based real-time updates |
+| Deployment | Vercel (frontend) + Render (backend) |
+
+## Features
+
+- **Real-time agent timeline** — Watch each step of the analysis process as it happens
+- **Statistical rigor** — Every finding backed by chi-squared, t-test, correlation, or ANOVA with p-values
+- **Publication-quality charts** — Custom matplotlib styling for editorial-grade visualizations
+- **Autonomous deep dive** — The agent decides what's interesting and investigates further without prompting
+- **Side-by-side comparison** — See your raw CSV next to the finished data story
+- **HTML export** — Download the complete report as a standalone HTML file
 
 ## Local Development
 
@@ -69,15 +76,15 @@ npm run dev
 ```
 
 ### Demo
-Open http://localhost:3000, click "Try with demo data" or upload any CSV.
+Open http://localhost:3000, click **"Explore demo dataset"** or upload any CSV.
 
 ## Built With
 
 - [GLM 5.1](https://z.ai) — Agent-first LLM for long-horizon reasoning
 - [Next.js](https://nextjs.org) — React framework
 - [FastAPI](https://fastapi.tiangolo.com) — Python web framework
-- [pandas](https://pandas.pydata.org) + [scipy](https://scipy.org) — Data analysis
-- [matplotlib](https://matplotlib.org) — Publication-quality charts
+- [pandas](https://pandas.pydata.org) + [scipy](https://scipy.org) — Data analysis & statistical testing
+- [matplotlib](https://matplotlib.org) — Publication-quality chart generation
 
 ## Built for
 
